@@ -8,6 +8,8 @@
 #include <cstring>
 
 constexpr uint8_t const BLOCK_SIZE = 16;
+constexpr uint8_t const BUFF_SIZE = 15;
+
 
 class AES : public Crypto {
 protected:

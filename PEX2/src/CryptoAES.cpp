@@ -83,16 +83,18 @@ bool AES::encrypt(const uint8_t *data, uint32_t len)
 		{
 			Zarray[i] = 0; //anything after size will be a 0
 		}
+		Zarray[BUFF_SIZE] = BLOCK_SIZE - pad;
 		mcrypt_generic(td,Zarray, BLOCK_SIZE);
 		m_encryptCallback(Zarray,BLOCK_SIZE);
 		return true;
 	}	
 	m_bufferstring.write((char*)data,len);
-	while (m_bufferstring.str().size() > BLOCK_SIZE)
+	while (m_bufferstring.str().size() > BUFF_SIZE)
 	{
 		uint8_t larray[BLOCK_SIZE];
-		m_bufferstring.read((char*)larray, BLOCK_SIZE);
-		mcrypt_generic(td, larray, BLOCK_SIZE);
+		m_bufferstring.read((char*)larray, BUFF_SIZE);
+		larray[BUFF_SIZE] = BUFF_SIZE;
+		mcrypt_generic(td, larray, BUFF_SIZE);
 		m_encryptCallback(larray, BLOCK_SIZE);	
 	}
 
@@ -104,6 +106,7 @@ bool AES::decrypt(const uint8_t *data, uint32_t len)
 {	
 
 	if (m_key == nullptr || m_IV == NULL) { return false; }
+	
 
         if (len == 0)
         {
@@ -117,7 +120,9 @@ bool AES::decrypt(const uint8_t *data, uint32_t len)
                         Zarray[i] = 0; //anything after size will be a 0
                 }
                 mdecrypt_generic(td,Zarray, BLOCK_SIZE);
-                m_decryptCallback(Zarray,BLOCK_SIZE);
+
+                m_decryptCallback(Zarray,Zarray[BUFF_SIZE]);
+		
                 return true;
         }
         m_bufferstring.write((char*)data,len);
@@ -126,7 +131,7 @@ bool AES::decrypt(const uint8_t *data, uint32_t len)
                 uint8_t larray[BLOCK_SIZE];
                 m_bufferstring.read((char*)larray, BLOCK_SIZE);
                 mdecrypt_generic(td, larray, BLOCK_SIZE);
-                m_decryptCallback(larray,BLOCK_SIZE);
+                m_decryptCallback(larray,larray[BUFF_SIZE]);
         }
 
 
