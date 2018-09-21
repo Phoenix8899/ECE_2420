@@ -1,0 +1,18 @@
+
+	constructor 
+
+		function pointer that takes a 8bit data pointer and a 32bit lenth //need to implement this 
+
+		gen key makes key with random number 1-255
+
+		get key for encryption
+
+		set key for decryption
+
+		destroy any memory 
+
+		encrypt duh
+
+		decrypt duh
+
+		crypto factory poinnts and returns the data from the other two files //need to implement this
