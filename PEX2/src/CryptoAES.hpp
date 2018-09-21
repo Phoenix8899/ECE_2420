@@ -3,13 +3,21 @@
 #include <functional>
 #include <memory>
 #include "Crypto.hpp"
-#include <mcrpyt.h>
+#include <mcrypt.h>
+#include <sstream>
+#include <cstring>
+
+constexpr uint8_t const BLOCK_SIZE = 16;
 
 class AES : public Crypto {
-protected:	
-	int m_key [] = {};
-	int m_len = 0;		
-
+protected:
+	MCRYPT td;	
+	uint8_t*  m_key;
+	uint8_t* m_IV;
+	uint8_t* m_buffer;
+	int buffer_len;
+	std::stringstream m_bufferstring;
+	
 public:
 
 AES(std::function<void(const uint8_t *data, uint32_t len)> encryptCallback,
@@ -24,4 +32,5 @@ void destroyKeys();
 bool encrypt(const uint8_t *data, uint32_t len);
 bool decrypt(const uint8_t *data, uint32_t len);
 
+~AES();
 };

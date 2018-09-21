@@ -25,7 +25,7 @@ POSTCPPC   = @mv -f $(DDIR)/$*.Td $(DDIR)/$*.d && touch $@
 all: | toolchain $(PNAME) test
 
 #List all sources to be included in the project (except main.cpp)
-_SRCS = Crypto.cpp CryptoNone.cpp CryptoCaesar.cpp
+_SRCS = Crypto.cpp CryptoNone.cpp CryptoCaesar.cpp CryptoAES.cpp
 
 #Derived variable SRCS used by dependency management
 SRCS  = main.cpp test.cpp $(_SRCS)

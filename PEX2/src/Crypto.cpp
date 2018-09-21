@@ -42,7 +42,7 @@ std::shared_ptr<Crypto> Crypto::cryptoFactory(std::function<void(const uint8_t *
 		{
 		case Algorithm::eNONE : return std::shared_ptr<Crypto>(new None(encryptCallback,decryptCallback));
 		case Algorithm::eCAESAR : return std::shared_ptr<Crypto>(new Caesar(encryptCallback,decryptCallback));
-		case Algorithm::eAES : return std::shared_ptr<Crypto>(new Caesar(encryptCallback,decryptCallback))
+		case Algorithm::eAES : return std::shared_ptr<Crypto>(new AES(encryptCallback,decryptCallback));
 		}
 
 		//dont forget to 
