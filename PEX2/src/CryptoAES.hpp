@@ -18,6 +18,7 @@ protected:
 	uint8_t* m_IV;
 	uint8_t* m_buffer;
 	int buffer_len;
+	uint8_t m_counter;
 	std::stringstream m_bufferstring;
 	
 public:
