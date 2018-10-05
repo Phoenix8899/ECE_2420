@@ -9,24 +9,15 @@
 #include <errno.h>
 #include <string.h>		
 
-	void makeMath(char *message, int len, mqd_t queue)
-	{
-	int retVal = mq_send(queue, message, len, 1);	
-	}
 
-	int main(){
+	int main(int argc, char *argv[]){
 	
-	mqd_t toAnswer = mq_open(//change this , O_RDWR, 0666, NULL);
-	//dont creat here becuase its better in server side.
-	std::cout << "Queue ID: " << toAnswer << std::endl;
+	mqd_t problemQueue = mq_open(problemQueueName.c_str(), O_RDWR, 0666, NULL);
+	std::cout << "Queue ID: " << problemQueue << std::endl;
 	
-	//mq_open fromA answer
+	mqd_t answerQueue = mq_open(answerQueueName.c_str(), O_RDWR, 0666, NULL);
+	std::cout << "answerQueue ID: " << answerQueue << std::endl;
 
-	//cast things to char...
-	//
-	////redo this \/ change to time iteratatis (check assignmnet description)
-	//
-	//time thingy todo use argv to run a loop enough times. 
 	Problem add;
 		add.m_opcode = eADD;
 		add.m_op1 = 1;
@@ -43,12 +34,15 @@
 		add.m_opcode = eDIV;
                 add.m_op1 = 4;
                 add.m_op2 = 2;
+	int buffer[10000];
+	Problem* prob = (Problem*) buffer;
+	unsigned int prio = 1;
 
-	makeMath((char *)&add, int sizeof(Problem), &toAnswer);
-	makeMath((char *)&sub, int sizeof(Problem), &toAnswer);
-	makeMath((char *)&mul, int sizeof(Problem), &toAnswer);
-	makeMath((char *)&div, int sizeof(Problem), &toAnswer);
-
+	for (int i = 0; i < argv[0]); i++)
+	{
+	int retVal = mq_send(problemQueue,(char *)&add, sizeof(Problem), 1);
+	retVal = mq_receive(answerQueue, prob, 8192, &prio);
+	}
 	
 
 
