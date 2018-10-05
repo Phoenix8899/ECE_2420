@@ -15,30 +15,30 @@
 	Problem* prob = (Problem*) buffer;	
 	unsigned int prio = 1;
 
-	mqd_t problems = mq_open(problemQueueName.c_str(), O_CREAT | O_RDWR, 0666, NULL);
-        std::cout << "mqProblems ID: " << problems << std::endl;
+	mqd_t problemQueue = mq_open(problemQueueName.c_str(), O_CREAT | O_RDWR, 0666, NULL);
+        //std::cout << "problemQueue ID: " << problemQueue << std::endl;
 	//iloop
 	//mq_open answerque
-	mqd_t answers = mq_open(answerQueueName.c_str(), O_CREAT | O_RDWR, 0666, NULL);	
-	std::cout << "mqAnswers ID: " << answers << std::endl;	
+	mqd_t answerQueue = mq_open(answerQueueName.c_str(), O_CREAT | O_RDWR, 0666, NULL);	
+	//std::cout << "mqAnswerQueue ID: " << answerQueue << std::endl;	
 
 	while(1)
 	{
-	int retVal = mq_receive(toAnswer,prob, 8192, &prio);
+	int retVal = mq_receive(problemQueue,buffer, 8192, &prio);
 	float toSend = 0;
-	switch (Operation)	
+	switch(prob->m_opcode)	
 	{
-	case eADD : toSend = prob.m_op1 + prob.m_op2;
-	case eSUB : toSend = prob.m_op1 - prob.m_op2;
-	case eMUL : toSend = prob.m_op1 * prob.m_op2;
-	case eDIV : toSend = prob.m_op1 / prob.m_op2;
+	case Operation::eADD : toSend = prob->m_op1 + prob->m_op2;
+	case Operation::eSUB : toSend = prob->m_op1 - prob->m_op2;
+	case Operation::eMUL : toSend = prob->m_op1 * prob->m_op2;
+	case Operation::eDIV : toSend = prob->m_op1 / prob->m_op2;
 	}    
-	int sRetVal = mq_send(answers, (char*)&toSend, sizeof(Problem), 1); 
+	int sRetVal = mq_send(answerQueue, (char*)&toSend, sizeof(Problem), 1); 
 	//mq_send toCient 
 	}
 	
-	int retVal = mq_close(problems);
-	int aRetVal = mq_close(answers);
+	int retVal = mq_close(problemQueue);
+	int aRetVal = mq_close(answerQueue);
 	//close mq
 
 	}

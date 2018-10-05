@@ -18,7 +18,7 @@ CPPL       = g++ $(CPPFLAGS)
 POSTCPPC   = @mv -f $(DDIR)/$*.Td $(DDIR)/$*.d && touch $@
 
 #List all main cpp files
-SRCS   = server.cpp client.cpp
+SRCS   = server.cpp client.cpp forkedClient.cpp
 _BINS  = $(patsubst %.cpp,$(BDIR)/%,$(SRCS))
 
 #Default make target: setup the environment, build the program, build and run tests
