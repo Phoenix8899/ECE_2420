@@ -43,7 +43,7 @@
                 add.m_op1 = 4;
                 add.m_op2 = 2;
 	char buffer[10000];
-	Problem* prob = (Problem*) buffer;
+	Answer* answ = (Answer*) buffer;
 	unsigned int prio = 1;
 
 
@@ -67,7 +67,7 @@
         		for (int i = 0; i < ARRAY_SIZE; i++)
         		{
         		int retVal = mq_receive(answerQueue, buffer, 8192, &prio);
-			//std::cout << "forked client: " << buffer << std::endl;
+			std::cout << "forked client: " << answ->m_answer << std::endl;
         		}
         	}
 	}

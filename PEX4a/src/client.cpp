@@ -35,16 +35,18 @@
                 add.m_op1 = 4;
                 add.m_op2 = 2;
 	char buffer[10000];
-	Problem* prob = (Problem*) buffer;
+	Answer* answ = (Answer*) buffer;
 	unsigned int prio = 1;
 
-	for (int i = 0; i < *argv[0]; i++)
+	int its = atoi(argv[1]);
+
+	for (int i = 0; i < its; i++)
 	{
 		for (int i = 0; i < ARRAY_SIZE; i++)
 		{
 		int retVal = mq_send(problemQueue,(char *)&add, sizeof(Problem), 1);
 		retVal = mq_receive(answerQueue, buffer, 8192, &prio);
-		//std::cout << "client: " << buffer << std::endl;
+		std::cout << "client: " << answ->m_answer << std::endl;
 		}
 	}
 	
