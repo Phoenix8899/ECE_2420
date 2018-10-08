@@ -45,14 +45,14 @@
 	char buffer[10000];
 	Answer* answ = (Answer*) buffer;
 	unsigned int prio = 1;
-
+	int its = atoi(argv[1]);
 
 	int pid = fork(); //this is were i start the fork
 
 
 	if (0 == pid)
 	{
-		for (int i = 0; i < *argv[0]; i++)
+		for (int i = 0; i < its; i++)
 		{
 			for (int i = 0; i < ARRAY_SIZE; i++)
 			{
@@ -62,7 +62,7 @@
 	}
 	else
 	{
-		for (int i = 0; i < *argv[0]; i++)
+		for (int i = 0; i < its; i++)
         	{
         		for (int i = 0; i < ARRAY_SIZE; i++)
         		{
