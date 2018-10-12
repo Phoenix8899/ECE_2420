@@ -1,0 +1,22 @@
+		
+
+		details: 
+		-two phases 
+		-phase one: 
+			-produce problems
+			-send them to mque
+			-recived by answer struck, to be answered 
+			-sent back through another mque to priblems file 
+		-phase two:
+			same as phase one but...
+				-split produce problems into two funcions and copy them into the fork template?
+			//probably seek to unserstand phase two better. 
+
+		
+		Notes: 
+			-int pid = fork() //calls the function fork, makes two processes one is set to value 0;
+				-parent is set to value in pid
+		
+
+			man mq_overview
+			all will have main.	
