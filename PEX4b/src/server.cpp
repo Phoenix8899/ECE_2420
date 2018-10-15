@@ -25,10 +25,10 @@
 	sem_t* problemNotEmpty;
 	sem_t* answerNotFull;
 	sem_t* answerNotEmpty;
-	//CHECK MONDAY THAT I USED CORRECT NAMING / INITIAL COUNT.
-	problemNotFull = sem_open(problemNotFullSem.c_str(),O_CREAT | O_RDWR, 0666, ARRAY_SIZE); //need to fill it up....
+
+	problemNotFull = sem_open(problemNotFullSem.c_str(),O_CREAT | O_RDWR, 0666, 0); //need to fill it up....
 	problemNotEmpty = sem_open(problemNotEmptySem.c_str(),O_CREAT | O_RDWR, 0666, 0); //made some maths
-	answerNotFull = sem_open(answerNotFullSem.c_str(),O_CREAT | O_RDWR, 0666, ARRAY_SIZE); //NOT SURE YET WHAT THIS IS FOR.
+	answerNotFull = sem_open(answerNotFullSem.c_str(),O_CREAT | O_RDWR, 0666, 0); //NOT SURE YET WHAT THIS IS FOR.
 	answerNotEmpty = sem_open(answerNotEmptySem.c_str(),O_CREAT | O_RDWR, 0666, 0); //made some maths
 	
 	int probshm = shm_open(problemMem.c_str(), O_RDWR | O_CREAT, 0666);
@@ -62,11 +62,6 @@
 		sem_post(answerNotEmpty);//post saying that there are now answers to be consumed. 
 
 	}//while
-	
-	//sem_close(problemNotFull);
-	//sem_close(problemNotEmpty);
-	//sem_close(answerNotFull);
-	//sem_close(answerNotEmpty);
 	
 }//program
 

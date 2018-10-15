@@ -46,8 +46,14 @@
 	
 	
 		int its = atoi(argv[1]);
-		int pid = fork(); //this is were i start the fork
 
+		for (int i = 0; i < ARRAY_SIZE*its; i++)
+               	{
+               	sem_post(problemNotFull);
+               	}
+
+
+		int pid = fork(); //this is were i start the fork
 
 	if (0 == pid)	//WAS I SUPPOSED TO USE FORKS OR THREADS?
 	{

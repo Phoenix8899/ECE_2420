@@ -35,20 +35,20 @@
 		Problem* prob = (Problem *)probaddr;
 	        Answer* answ = (Answer *)answaddr;
 
-		//std::cout << "it crashes after this?" << std::endl;
 			
 	int its = atoi(argv[1]);
 
+	for (int i = 0; i < ARRAY_SIZE*its; i++)
+		{
+		sem_post(problemNotFull);
+		}
+		
 	for (int i = 0; i < its; i++)
 	{
 		for (int i = 0; i < ARRAY_SIZE; i++)
 		{
 
-		//std::cout << "does it make it to sem wait?" << std::endl;
-
 		sem_wait(problemNotFull);
-
-		//std::cout << "does it make it past the sem wait?" << std:: endl;		
 
 		prob[i].m_opcode = eADD;
 		prob[i].m_op1 = 1;
