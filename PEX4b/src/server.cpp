@@ -16,7 +16,10 @@
 
 	int main(){
 	
-	//need to double check the naming with pex4a just to make sure im doing it right.
+	sem_unlink(problemNotFullSem.c_str());
+        sem_unlink(problemNotEmptySem.c_str());
+        sem_unlink(answerNotFullSem.c_str());
+        sem_unlink(answerNotEmptySem.c_str());
 
 	sem_t* problemNotFull;
 	sem_t* problemNotEmpty;
@@ -27,13 +30,6 @@
 	problemNotEmpty = sem_open(problemNotEmptySem.c_str(),O_CREAT | O_RDWR, 0666, 0); //made some maths
 	answerNotFull = sem_open(answerNotFullSem.c_str(),O_CREAT | O_RDWR, 0666, ARRAY_SIZE); //NOT SURE YET WHAT THIS IS FOR.
 	answerNotEmpty = sem_open(answerNotEmptySem.c_str(),O_CREAT | O_RDWR, 0666, 0); //made some maths
-	
-
-	//create semaphores remember to keep same name between client and server, thats how you open the same one on both sides.
-	//
-	//look into shared memory to keep track of the same stuffs and things n junk.
-	
-	//probably better to make and open all things serverside 
 	
 	int probshm = shm_open(problemMem.c_str(), O_RDWR | O_CREAT, 0666);
         int answshm = shm_open(answerMem.c_str(), O_RDWR | O_CREAT, 0666);
@@ -47,16 +43,6 @@
 	Problem* prob = (Problem *)probaddr;
 	Answer* answ = (Answer *)answaddr;
 		
-	//int fd = shm_open (man shm_overview)
-	//ftrunkate, probably size of problem * 1024, to have a buffer, 
-	//mmap makes it an array of bytes, cast it to an array of objects 
-	//
-	//void *ptr = malloc(sizeof(problem) *10) dont use this, use shared memory 
-	//problem *pproblem = (problem *)ptr; //basicly its just to show us that a pointer of bytes
-					      // can be cast to a problem 
-	//for....
-	//pProblem[i].m_member = 7; //used just like an array after cast
-	
 	int count = 0;
 	float toSend = 0;
 	while(1)
@@ -77,4 +63,26 @@
 
 	}//while
 	
-	}//program
+	//sem_close(problemNotFull);
+	//sem_close(problemNotEmpty);
+	//sem_close(answerNotFull);
+	//sem_close(answerNotEmpty);
+	
+}//program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

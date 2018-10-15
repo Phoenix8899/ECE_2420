@@ -34,6 +34,8 @@
 
 		Problem* prob = (Problem *)probaddr;
 	        Answer* answ = (Answer *)answaddr;
+
+		//std::cout << "it crashes after this?" << std::endl;
 			
 	int its = atoi(argv[1]);
 
@@ -41,7 +43,12 @@
 	{
 		for (int i = 0; i < ARRAY_SIZE; i++)
 		{
+
+		//std::cout << "does it make it to sem wait?" << std::endl;
+
 		sem_wait(problemNotFull);
+
+		//std::cout << "does it make it past the sem wait?" << std:: endl;		
 
 		prob[i].m_opcode = eADD;
 		prob[i].m_op1 = 1;
@@ -53,7 +60,7 @@
 		std::cout << answ[i].m_answer;	
 		//not really sure how to consume...
 
-		//sem_post() i think there is a reason to post here maybe?
+		//sem_post(answerNotFull);      // i think there is a reason to post here maybe?
 
 		}
 	}
