@@ -45,8 +45,8 @@ public:
   void popItem(T &item)
   {
 	std::unique_lock<std::mutex> lck(m_mtx);
-	m_cv.wait(lck, [](){return m_items.size > 0;}) //think of as error checking, so that we cant pop / trash
-	item = front();
+	m_cv.wait(lck, [this](){return m_items.size() > 0;}); //think of as error checking, so that we cant pop / trash
+	item = m_items.front();
   	m_items.pop_front();
   }
 private:

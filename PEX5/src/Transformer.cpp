@@ -1,7 +1,7 @@
 #include "Transformer.hpp"
 
 
-	Tramsformer::Transformer(Fifo<std::shared_ptr<cv::Mat> > &inFifo,
+	Transformer::Transformer(Fifo<std::shared_ptr<cv::Mat> > &inFifo,
               Fifo<std::shared_ptr<cv::Mat> > &outFifo,
               std::function<void(std::shared_ptr<cv::Mat>)> displayFunc,
               uint32_t frameCount)
@@ -17,10 +17,11 @@
               std::function<void(std::shared_ptr<cv::Mat>)> displayFunc,
               uint32_t frameCount)
 	:m_inFifo(inFifo),
-	 m_displayFunk(displayFunc)
+	 m_outFifo(inFifo),
+	 m_displayFunc(displayFunc)
 	{	
 		m_last == true;
-		std::thread t(&Transformer::process,m_pProcessThread,frameCount);
+		m_pProcessThread.reset (new std::thread (&Transformer::process,this,frameCount));
 	}
 
 	void Transformer::wait()
@@ -30,16 +31,20 @@
 
 	void Transformer::process(uint32_t frameCount)
 	{
-		std::shared_ptr<cv::Mat> pFrame;
-		m_inFifo.popItem(pFrame);
-		transform(pFrame); 
-		m_displayFunc(pFrame);
-		if (!m_last)
-			m_outFifo.addItem(pFrame);
+		while(frameCount > 0)
+		{
+			std::shared_ptr<cv::Mat> pFrame;
+			m_inFifo.popItem(pFrame);
+			pFrame = transform(pFrame); 
+			m_displayFunc(pFrame);
+			if (!m_last)
+				m_outFifo.addItem(pFrame);
+	
+			frameCount--;	
+		}
 	}
 	
 
-	//TODO 
 	//
 	//new class for each tranform? 
 	// just constructor 

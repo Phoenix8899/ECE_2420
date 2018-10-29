@@ -1,3 +1,6 @@
+#Output program name to make this Makefile more reusable between programming exercises
+PNAME = OpenCV
+
 #Project Tree Structure
 LDIR = lib
 SDIR = src
@@ -10,7 +13,6 @@ INC        = $(SDIR)
 INC_PARAMS = $(foreach d, $(INC), -I$d)
 DEPFLAGS   = -MT $@ -MMD -MP -MF $(DDIR)/$*.Td
 CPPFLAGS   = -std=c++11 -g
-#LINKFLAGS  = -lrt -pthread
 
 include Makefile.link
 
@@ -19,16 +21,25 @@ CPPC       = g++ $(CPPFLAGS) $(INC_PARAMS) $(DEPFLAGS)
 CPPL       = g++ $(CPPFLAGS)
 POSTCPPC   = @mv -f $(DDIR)/$*.Td $(DDIR)/$*.d && touch $@
 
-#List all main cpp files
-SRCS   = server.cpp client.cpp forkedClient.cpp
-_BINS  = $(patsubst %.cpp,$(BDIR)/%,$(SRCS))
-
 #Default make target: setup the environment, build the program, build and run tests
 .PHONY: all
-all: | toolchain $(_BINS)
+all: | toolchain $(PNAME)
+
+#List all sources to be included in the project (except main.cpp)
+_SRCS = Transformer.cpp Color.cpp BlacknWhite.cpp Edge.cpp
+
+#Derived variable SRCS used by dependency management
+SRCS  = main.cpp  $(_SRCS)
+
+#Derived variables POBJ/TOBJ lists dependencies for the output binaries
+POBJ = $(ODIR)/main.o $(patsubst %.cpp, $(ODIR)/%.o, $(_SRCS))
 
 #Program link step
-$(BDIR)/%: $(ODIR)/%.o
+$(BDIR)/$(PNAME): $(POBJ)
+	$(CPPL) -o $@ $^ $(LINKFLAGS)
+
+#Unit Test link step
+$(BDIR)/test: $(TOBJ)
 	$(CPPL) -o $@ $^ $(LINKFLAGS)
 
 #All compilation units in the project
@@ -41,8 +52,13 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DDIR)/%.d
 clean:
 	rm -rf $(DDIR) $(ODIR) $(BDIR)
 
-.PHONY: toolchain
+.PHONY: toolchain pmain $(PNAME)
 toolchain: | $(BDIR) $(ODIR) $(DDIR)
+pmain: $(BDIR)/$(PNAME)
+#tmain: $(BDIR)/test
+$(PNAME): | toolchain pmain
+#test: | toolchain tmain
+#	./$(BDIR)/test
 
 $(DDIR):
 	@mkdir $(DDIR)
