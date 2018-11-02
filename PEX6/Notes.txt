@@ -1,0 +1,31 @@
+
+	look at crypto factory 
+
+	needs a derived class, becuase there is a pure virtual 
+	
+	//im not sure if action function needs to be made 
+
+	
+	steps:
+	make platter needs to make n heads //static is like a global function that all derived classes can do.
+	
+	execute
+	{
+	if self or left or right is !locked
+
+	//figure out each constuctor so that it has its own mutex and is aware of arm to its left and right.
+	
+	lock mutex left right and self
+
+	do stuff 
+
+	unlock left right and self
+	}
+
+	//can only write if all three are unlocked.
+
+	//execute is a pure virtual, that means there is another class for some reason? but why and what does it do?
+
+	//call the base header in the derived header init list
+
+	//derived class to make anything n stuffs 
