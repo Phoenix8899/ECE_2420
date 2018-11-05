@@ -1,5 +1,5 @@
 #Output program name to make this Makefile more reusable between programming exercises
-PNAME = OpenCV
+PNAME = main
 
 #Project Tree Structure
 LDIR = lib
@@ -12,7 +12,7 @@ DDIR = dep
 INC        = $(SDIR)
 INC_PARAMS = $(foreach d, $(INC), -I$d)
 DEPFLAGS   = -MT $@ -MMD -MP -MF $(DDIR)/$*.Td
-CPPFLAGS   = -std=c++11 -g
+CPPFLAGS   = -std=c++11 -g -O0
 
 include Makefile.link
 

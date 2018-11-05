@@ -1,50 +1,35 @@
 #include <iostream>
+#include <thread>
+#include <unistd.h>
+#include <mutex>
 
 #include "Head.hpp"
 
-/*	void read()
-	{
-	std::cout << "I am reading" << std::endl;
-	}
-	
-	void write()
-	{
-	std::cout << "I am writing" << std::endl;
-	}
+#define HEADS 6
 
-	void test1(int numheads, std::vector<std::shared_ptr<Head>> Platter)//quick syntax head
-	{
-	while(1)
-	 {
-	 //test if 0 order
-	 Platter[0]->execute(read);
-	 }
-	}
-	
-	void test2(int numheads)
-	{
-	//do stuffs
-	}
-
-	void test3(int numheads)
-	{
-	//do stuffs
-	}
-*/
-int main(int argc, char* argv[])
+int main()
 {
+	std::mutex mtx;
+	auto action = [&mtx]() {
+		sleep(1);
+		std::unique_lock<std::mutex> lock(mtx);
+		std::cout << "Here" << std::endl;
+	};	
+	
+		std::vector<std::shared_ptr<std::thread>> threads;
+	std::vector<std::shared_ptr<Head>> heads = Head::makePlatter(HEADS);
 
-	std::cout << "Hello World!" << std::endl;		
-
-/*	int numheads = atoi (argv[1]);
+	for (int i = 0; i < HEADS; i++)
+	{
+		threads.push_back(std::make_shared<std::thread>([i, &heads, action](){
+			heads[i]->execute(action);
+		}));
+	}
+		
+	for (int i = 0; i < HEADS; ++i)
+	{
+		threads[i]->join();
+	}
 	
-	std::vector<std::shared_ptr<Head>> platter;
-	
-	platter = Head::makePlatter(numHeads);
-	
-	//make a vector of threads.. a thread for each head
-	std::thread t(test1,numHeads,&platter);//quick syntax check
-	std::thread u(test2);
-	test3();
-*/
+	return 0;
 }
