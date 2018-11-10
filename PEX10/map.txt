@@ -1,0 +1,21 @@
+logan
+bloomington
+logan richmond 11
+richmond logan 11
+logan garden_city 41
+garden_city logan 41
+richmond franklin 18
+franklin richmond 18
+franklin garden_city 32 
+garden_city franklin 32
+franklin paris 25
+paris franklin 25
+franklin preston 6
+preston franklin 6
+preston paris 37 
+paris preston 37
+paris bloomington 3
+bloomington paris 3
+bloomington garden_city 19
+garden_city bloomington 19
+
