@@ -37,13 +37,15 @@
 	{
 		for (int i = 0; i < m_cityMap.m_nodes.size(); ++i)
 		{
-			if(m_cityMap.m_nodes[i].name == data)
+			auto& thisNode = m_cityMap.m_nodes[i]; //makes a variable similar to an index
+			if(thisNode.name == data)
 			{
-				for (int j = 0; j < m_cityMap.m_nodes[i].m_neighbors.size(); ++j) //ugghhhh nested vectors
+				for (int j = 0; j < thisNode.m_neighbors.size(); ++j) //ugghhhh nested vectors
 				{
-					if (m_cityMap.m_nodes[i].m_neighbors[j].name == unvisited)
+					if (thisNode.m_neighbors[j].name == unvisited)
 						return true;
 				}
+				return false;
 			}
 		}
 		return false;
