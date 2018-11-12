@@ -32,9 +32,9 @@ int main()
 	}
 
 	table mainTable(mainMap,start,finish);
-	
+		
 	mainTable.doAlgorithm();
-
+	
 		
 
 
