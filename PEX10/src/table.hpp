@@ -21,7 +21,6 @@ class table
         std::vector<sData> m_data;
         std::vector<std::string> m_unvisited; //this needs a spot or the function does or something
 
-	bool doable();
 	void printPath(std::string start, std::string finish);
 	void doAlgorithm();
         void addItem (sData data);
