@@ -229,50 +229,102 @@ private:
   /**
    * @brief Insert a node and return new root
    *
-   * @param key Key to insert
+   >* @param key Key to insert
    * @param val Value associated with key
    * @return New root of node list
    */
   std::shared_ptr<ListKeyValNode <K, V> > insertInternal(const K &key,
                                                          const V &val)
   {	
-	auto thingToInsert = std::shared_ptr<ListKeyValNode<K, V>>(new ListKeyValNode<K, V>());
+	auto thingToInsert = std::shared_ptr<ListKeyValNode<K, V>>(new ListKeyValNode<K, V>()); //new node
 	thingToInsert->m_key.reset(new K(key));
         thingToInsert->m_val.reset(new V(val));
+	thingToInsert->m_prev.lock().reset(new ListKeyValNode<K,V>());
+	thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
 
-	std::shared_ptr<ListKeyValNode<K,V>> tempNode = m_rootNode;
-		
-	while (tempNode->m_key != nullptr && key <= *(tempNode->m_key))
+	std::shared_ptr<ListKeyValNode<K,V>> tempNode = m_rootNode; 
+	
+	if (m_rootNode->m_key == nullptr)
 	{
-		if (key == *(tempNode->m_key))
+		thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
+		return thingToInsert;
+	}
+	else if (key < *(m_rootNode->m_key))
+	{
+		m_rootNode->m_prev.lock().reset(new ListKeyValNode<K,V>());
+		thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
+		thingToInsert->m_next = m_rootNode;
+		m_rootNode->m_prev = thingToInsert;
+		return thingToInsert;
+	}
+	else 
+	{
+		while (tempNode->m_key != nullptr && key >= *(tempNode->m_key))
 		{
-			*(tempNode->m_val) = val;
-			return m_rootNode;
-		}
-		else 
-		{
-		tempNode = tempNode->m_next;
-		}
+			if(key == *(tempNode->m_key))
+			{
+				*(tempNode->m_val) = val;
+				return m_rootNode;
+			}
+			else if (tempNode->m_next == nullptr)
+			{
+				tempNode->m_prev.lock()->m_next = thingToInsert;
+				thingToInsert->m_prev = tempNode->m_prev;
+                                thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
+                                return m_rootNode;
+                
+			}
+			else
+			{
+				tempNode = tempNode->m_next;
+			}
+		}	
+				
+				
+					tempNode = thingToInsert;
+					//thingToInsert->m_next = tempNode->m_next;
+					//thingToInsert->m_prev = thingToInsert->m_prev;	
+					//tempNode = thingToInsert;
+					return m_rootNode;
+				
 	}
 
-		if (tempNode->m_prev.lock() != nullptr)
-		{
-			tempNode->m_prev.lock()->m_next = thingToInsert;
-			tempNode->m_next->m_prev = thingToInsert;
-			thingToInsert->m_prev = tempNode->m_prev;
-			thingToInsert->m_next = tempNode->m_next;
-		}
+
+
+
+  }
+	//TODO old attempt	
+	//while (tempNode->m_key != nullptr && key <= *(tempNode->m_key))
+	//{
+	//	if (key == *(tempNode->m_key))
+	//	{
+	//		*(tempNode->m_val) = val;
+	//		return m_rootNode;
+	//	}
+	//	else 
+	//	{
+	//	tempNode = tempNode->m_next;
+	//	}
+	//}
+
+	//	if (tempNode->m_prev.lock() != nullptr)
+	//	{
+	//		tempNode->m_prev.lock()->m_next = thingToInsert;
+	//		tempNode->m_next->m_prev = thingToInsert;
+	//		thingToInsert->m_prev = tempNode->m_prev;
+	//		thingToInsert->m_next = tempNode->m_next;
+	//	}
 		//else if (tempNode->m_key == nullptr)
 		//{
 		//	tempNode->m_prev = thingToInsert;
 		//}
-		else
-		{
-			thingToInsert->m_next.reset (new ListKeyValNode<K,V>);
-			return thingToInsert;
-		}
-		return m_rootNode;
-  }
+	//	else
+	//	{
+	//		thingToInsert->m_next.reset (new ListKeyValNode<K,V>);
+	//		return thingToInsert;
+	//	}
+	//	return m_rootNode;
+ 
   /**
    * @brief Delete a node and return new root
    *
