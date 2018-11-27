@@ -44,6 +44,7 @@ private:
 	std::shared_ptr<V> m_val;
 	std::shared_ptr<BSTKeyValNode<K,V>> m_left;
 	std::shared_ptr<BSTKeyValNode<K,V>> m_right;
+	std::weak_ptr<BSTKeyValNode<K,V>> m_prev;
 };
 
 template<class K, class V>
@@ -133,9 +134,15 @@ class BSTKeyVal : public KeyVal<K,V>
 				*(parent->m_val) = val;
 			}
 			else if (key < *(parent->m_key))
+				{
+				thingToInsert->m_prev = parent;
 				insertInternal(key,val, parent->m_left);
+				}
 			else 
+				{
+				thingToInsert->m_prev = parent;
 				insertInternal(key,val, parent->m_right);
+				}
 		}
 	}
 		
@@ -148,49 +155,40 @@ class BSTKeyVal : public KeyVal<K,V>
 	
 		if (key == *(parent->m_key))
 		{
-			//if(parent->m_left == nullptr && parent->m_right == nullptr)
-			//	parent = nullptr;
-			//else if (parent->m_left == nullptr)
-			//{
-			//	parent = parent->m_right;
-			//}
-			//else if (parent->m_right == nullptr)
-			//{
-			//	parent = parent->m_left;
-			//}
-			//else 
-			//{
-				std::shared_ptr<BSTKeyValNode<K,V>> succesor = parent;
-				if (succesor->m_right->m_key != nullptr)
-				{
-					succesor = succesor->m_right;
-					while (succesor->m_left->m_key != nullptr)
-					{
-						succesor = succesor->m_left;
-					}
-				}
-				else if (succesor->m_left->m_key != nullptr)
+			std::shared_ptr<BSTKeyValNode<K,V>> succesor = parent;
+			if (succesor->m_right->m_key != nullptr)
+			{
+				succesor = succesor->m_right;
+				while (succesor->m_left->m_key != nullptr)
 				{
 					succesor = succesor->m_left;
-					while (succesor->m_right->m_key != nullptr)
-					{
-						succesor = succesor->m_left;
-					}
 				}
-				else {
-//					succesor = succesor->m_right;
-					parent->m_key = nullptr;
-					parent->m_key = nullptr;
-					parent->m_left = nullptr;
-					parent->m_right = nullptr;
-					return;
+			}
+			else if (succesor->m_left->m_key != nullptr)
+			{
+				succesor = succesor->m_left;
+				while (succesor->m_right->m_key != nullptr)
+				{
+					succesor = succesor->m_right;
 				}
+			}
+			else {
+				parent->m_key = nullptr;
+				parent->m_key = nullptr;
+				parent->m_left = nullptr;
+				parent->m_right = nullptr;
+				return;
+			}
 
-				parent->m_key = succesor->m_key;
-				parent->m_val = succesor->m_val;
-				
-//				succesor = nullptr;
-			//}
+			parent->m_key = succesor->m_key;
+			parent->m_val = succesor->m_val;
+			
+
+			//TODO why does this not work?
+			//std::shared_ptr<BSTKeyValNode<K,V>> prev = succesor->m_prev.lock();
+			//prev->m_right.reset();
+			//prev->m_left.reset();	
+			
 		}
 		else if (key < *(parent->m_key))
 			delInternal(key, parent->m_left);
