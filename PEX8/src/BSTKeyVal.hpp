@@ -183,11 +183,7 @@ class BSTKeyVal : public KeyVal<K,V>
 			parent->m_key = succesor->m_key;
 			parent->m_val = succesor->m_val;
 			
-
-			//TODO why does this not work?
-			//std::shared_ptr<BSTKeyValNode<K,V>> prev = succesor->m_prev.lock();
-			//prev->m_right.reset();
-			//prev->m_left.reset();	
+			delInternal(*(succesor->m_key), succesor);
 			
 		}
 		else if (key < *(parent->m_key))

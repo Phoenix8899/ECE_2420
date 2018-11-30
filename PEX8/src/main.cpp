@@ -4,7 +4,8 @@
 int main ()
 {
 	BSTKeyVal<int , std::string> bst;
-
+	BSTKeyVal<int , std::string> BSTWO;
+	
 	bst.insert(5,"five");
 	bst.insert(4,"four");
 	bst.insert(6,"six");
@@ -14,6 +15,8 @@ int main ()
 	bst.insert(8,"eight");
 	bst.insert(1,"one");
 	bst.insert(9,"nine");
+
+	BSTWO = bst; //does this work
 
 	std::cout << std::endl << std::endl << "Full iteration:" << std::endl;
  	bst.forEach([](const int &key, std::string &val){
@@ -30,6 +33,13 @@ int main ()
         std::cout << "Val: " << val << std::endl;
         });
 
+	std::cout << std::endl << std::endl << "Deep Copy?" << std::endl;
+	
+	std::cout << std::endl << std::endl << "BSTWO:" << std::endl;
+        BSTWO.forEach([](const int &key, std::string &val){
+        std::cout << "Key: " << key << std::endl;
+        std::cout << "Val: " << val << std::endl;
+        });
 
 
 }
