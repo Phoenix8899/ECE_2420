@@ -16,27 +16,30 @@ private:
 
 	BSTKeyValNode &operator=(const BSTKeyValNode &other)
 	{
-		m_key = other.m_key;
-		m_val = other.m_val;
-		
-		if (m_left == nullptr)
-		{
-			m_left = nullptr;
-		}
-		else 
-		{
-			m_left.reset(new BSTKeyValNode<K,V>());
-			*m_left = *(other.m_left);
-		}
+
+		//m_key.reset(new K(*(other.m_key)));
+		//m_val.reset(new V(*(other.m_val)));
 	
-		if (m_right == nullptr)
+
+	
+		if (other.m_key == nullptr)
 		{
 			m_right = nullptr;
+			m_left = nullptr;
+			m_key = nullptr;
+			m_val = nullptr;
+			//TODO weak ptr?
 		}
 		else 
 		{
-			m_right.reset(new BSTKeyValNode<K,V>());
-			*m_right = *(other.m_left);
+		m_key.reset(new K(*(other.m_key)));
+                m_val.reset(new V(*(other.m_val)));
+
+		m_right.reset(new BSTKeyValNode<K,V>());
+                *m_right = *(other.m_right);	
+
+		m_left.reset(new BSTKeyValNode<K,V>());
+                *m_left = *(other.m_left);
 		}
 	}
 	
@@ -44,7 +47,7 @@ private:
 	std::shared_ptr<V> m_val;
 	std::shared_ptr<BSTKeyValNode<K,V>> m_left;
 	std::shared_ptr<BSTKeyValNode<K,V>> m_right;
-	std::weak_ptr<BSTKeyValNode<K,V>> m_prev;
+	//std::weak_ptr<BSTKeyValNode<K,V>> m_prev;
 };
 
 template<class K, class V>
@@ -135,12 +138,12 @@ class BSTKeyVal : public KeyVal<K,V>
 			}
 			else if (key < *(parent->m_key))
 				{
-				thingToInsert->m_prev = parent;
+				//thingToInsert->m_prev = parent;
 				insertInternal(key,val, parent->m_left);
 				}
 			else 
 				{
-				thingToInsert->m_prev = parent;
+				//thingToInsert->m_prev = parent;
 				insertInternal(key,val, parent->m_right);
 				}
 		}
