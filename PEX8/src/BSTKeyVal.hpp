@@ -59,6 +59,7 @@ class BSTKeyVal : public KeyVal<K,V>
 
 		BSTKeyVal(const BSTKeyVal &other)
 		{
+			m_rootNode.reset(new BSTKeyValNode<K, V>());
 			*this = other;
 		}
 		BSTKeyVal &operator=(const BSTKeyVal &other)
@@ -76,10 +77,10 @@ class BSTKeyVal : public KeyVal<K,V>
 		}
 		virtual std::shared_ptr<V> get(const K &key) override //TODO write helper func
 		{
-			std::shared_ptr<V> ValVar;
-			ValVar.reset(new V);
-			ValVar = getInternal(key,m_rootNode);
-			return ValVar;
+//			std::shared_ptr<V> ValVar;
+//			ValVar.reset(new V);
+			return getInternal(key,m_rootNode);
+//			return ValVar;
 		}
 		virtual void forEach(std::function<void(const K &key, V &val)> callback) override //TODO L/P 
 		{
@@ -91,14 +92,16 @@ class BSTKeyVal : public KeyVal<K,V>
 	
 	std::shared_ptr<V> getInternal (const K &key, std::shared_ptr<BSTKeyValNode<K,V>> &parent)
 	{
-		std::shared_ptr<V> ValVar;
-		ValVar.reset(new V);
+//		std::shared_ptr<V> ValVar;
+//		ValVar.reset(new V);
+		if (parent->m_key == nullptr)
+			return nullptr;
 		if (key == *(parent->m_key))
 			return parent->m_val;
 		else if (key < *(parent->m_key))
-			ValVar = getInternal (key, parent->m_left);
+			return getInternal(key, parent->m_left);
 		else 
-			ValVar = getInternal (key, parent->m_right);
+			return getInternal(key, parent->m_right);
 	}
 
 	void forEachInternal (std::function<void(const K &key, V &val)> callback, std::shared_ptr<BSTKeyValNode<K,V>> &parent)

@@ -60,35 +60,25 @@ private:
    * @return ListKeyNodeVal ref for chaining assignments
    */
   ListKeyValNode &operator=(const ListKeyValNode &other)
-  { 
-	if (other->m_key == NULL)
+  {
+	
+	if (other.m_key == nullptr)
 	{
-		m_key.reset (new K());
-                *m_key = *(other->m_key);
-
-                m_val.reset (new V());
-                *m_val = *(other->m_val);
-
-                m_prev.reset (new ListKeyValNode<K, V>()); //TODO this might be an error spot
-                *m_prev = *(other->m_prev);
-
-                m_next.reset (new ListKeyValNode<K,V>());
-                *m_next = NULL;
-	}
+		m_key = nullptr;
+		m_val = nullptr;
+		m_next = nullptr;
+		//m_prev = nullptr;
+	}		
 	else 
 	{
-		m_key.reset (new K());
-		*m_key = *(other->m_key);
-	
-		m_val.reset (new V());
-		*m_val = *(other->m_val);
-	
-		m_prev.reset (new ListKeyValNode<K, V>());
-		*m_prev = *(other->m_prev);
-
-		m_next.reset (new ListKeyValNode<K,V>());
-		*m_next = *(other->m_next);
+		m_key.reset(new K(*(other.m_key)));
+		m_val.reset(new V(*(other.m_val)));
+		m_next.reset(new ListKeyValNode<K,V>());
+		*m_next = *(other.m_next);
+		//*m_prev = *(other.m_prev);
 	}
+
+ 
   }  	
   /** @brief Ptr to key; may be null for last item in list */
   std::shared_ptr<K> m_key;
@@ -140,7 +130,7 @@ public:
    */
   ListKeyVal &operator=(const ListKeyVal &other)
   {
-	this->m_rootNode = other.m_rootNode;
+	*(this->m_rootNode) = *(other.m_rootNode);
   }
   /**
    * @brief Insert an object
@@ -240,50 +230,22 @@ private:
 	auto thingToInsert = std::shared_ptr<ListKeyValNode<K, V>>(new ListKeyValNode<K, V>()); //new node
 	thingToInsert->m_key.reset(new K(key));
         thingToInsert->m_val.reset(new V(val));
-	thingToInsert->m_prev.lock().reset(new ListKeyValNode<K,V>());
+	//thingToInsert->m_prev.lock().reset(new ListKeyValNode<K,V>());
 	thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
 
 	std::shared_ptr<ListKeyValNode<K,V>> tempNode = m_rootNode; 
 	
-	if (m_rootNode->m_key == nullptr)
-	{
-		thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
-		m_rootNode = thingToInsert;
-		return m_rootNode;
-	}
-	else if (key < *(m_rootNode->m_key))
+	if (m_rootNode == nullptr)
 	{
 		m_rootNode = thingToInsert;
-		thingToInsert->m_next = tempNode;
-		tempNode->m_prev = thingToInsert;
-		return m_rootNode;
 	}
 	else 
 	{
-		while (tempNode->m_key != nullptr && key >= *(tempNode->m_key))
+		while (m_tempNode->m_key != nullptr)
 		{
-			if(key == *(tempNode->m_key))
-			{
-				*(tempNode->m_val) = val;
-				return m_rootNode;
-			}
-			else if (tempNode->m_next->m_key == nullptr)
-			{
-				tempNode->m_next = thingToInsert;
-				thingToInsert->m_prev = tempNode->m_prev;
-                                thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
-                                return m_rootNode;
-                
-			}
-			else
-			{
-				tempNode = tempNode->m_next;
-			}
-		}	
-				
-					return m_rootNode;
-				
-	}//else 
+			tempNode
+		}
+	}
 
 
 

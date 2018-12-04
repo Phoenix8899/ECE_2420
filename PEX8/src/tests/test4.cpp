@@ -13,8 +13,11 @@ int main()
   inner.del("one");
   inner.del("two");
 
-  outer.get("outer1")->del("one");
-  outer.get("outer2")->del("two");
+ auto outer1 = outer.get("outer1");
+ auto outer2 = outer.get("outer2");
+  
+  outer1->del("one");
+  outer2->del("two");
 
   outer.forEach([](const std::string &key, KeyVal<std::string, int> &val){
     std::cout << key;
