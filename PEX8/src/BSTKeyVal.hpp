@@ -17,8 +17,6 @@ private:
 	BSTKeyValNode &operator=(const BSTKeyValNode &other)
 	{
 
-		//m_key.reset(new K(*(other.m_key)));
-		//m_val.reset(new V(*(other.m_val)));
 	
 
 	
@@ -57,6 +55,11 @@ class BSTKeyVal : public KeyVal<K,V>
 		BSTKeyVal()
 		{
 			m_rootNode.reset(new BSTKeyValNode<K, V>());
+		}
+
+		BSTKeyVal(const BSTKeyVal &other)
+		{
+			*this = other;
 		}
 		BSTKeyVal &operator=(const BSTKeyVal &other)
 		{
