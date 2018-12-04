@@ -61,24 +61,23 @@ private:
    */
   ListKeyValNode &operator=(const ListKeyValNode &other)
   {
-	
+	m_prev.reset();
 	if (other.m_key == nullptr)
 	{
 		m_key = nullptr;
 		m_val = nullptr;
 		m_next = nullptr;
 		//m_prev = nullptr;
-	}		
+	}
 	else 
 	{
 		m_key.reset(new K(*(other.m_key)));
 		m_val.reset(new V(*(other.m_val)));
+
 		m_next.reset(new ListKeyValNode<K,V>());
 		*m_next = *(other.m_next);
-		//*m_prev = *(other.m_prev);
+		m_next->m_prev = this->shared_from_this();
 	}
-
- 
   }  	
   /** @brief Ptr to key; may be null for last item in list */
   std::shared_ptr<K> m_key;
@@ -118,6 +117,7 @@ public:
    */
   ListKeyVal(const ListKeyVal &other)
   {
+	m_rootNode.reset (new ListKeyValNode<K, V>());
 	*this = other;
   }
   /**
@@ -183,7 +183,7 @@ public:
   virtual std::shared_ptr<V> get(const K &key) override
   {
 	std::shared_ptr<ListKeyValNode<K,V>> tempNode = m_rootNode;
-	while (key <= *(tempNode->m_key))
+	while (tempNode->m_key != nullptr && key >= *(tempNode->m_key))
 	{
 		if (key == *(tempNode->m_key))
 		{
@@ -194,7 +194,7 @@ public:
 			tempNode = tempNode->m_next;
 		}
 	}
-	return m_rootNode->m_val;
+	return nullptr; //m_rootNode->m_val;
   }
   /**
    * @brief Execute callback for each entry
@@ -230,23 +230,53 @@ private:
 	auto thingToInsert = std::shared_ptr<ListKeyValNode<K, V>>(new ListKeyValNode<K, V>()); //new node
 	thingToInsert->m_key.reset(new K(key));
         thingToInsert->m_val.reset(new V(val));
-	//thingToInsert->m_prev.lock().reset(new ListKeyValNode<K,V>());
 	thingToInsert->m_next.reset(new ListKeyValNode<K,V>());
+	thingToInsert->m_next->m_prev = thingToInsert;
 
 	std::shared_ptr<ListKeyValNode<K,V>> tempNode = m_rootNode; 
 	
-	if (m_rootNode == nullptr)
+	if (m_rootNode->m_key == nullptr) //root is null, new root
 	{
-		m_rootNode = thingToInsert;
+		//m_rootNode = thingToInsert;
+		return thingToInsert;
+	}
+	else if (key < *(m_rootNode->m_key)) //key less than root, new root
+	{
+		thingToInsert->m_next = m_rootNode;
+		m_rootNode->m_prev = thingToInsert;
+		return thingToInsert;
 	}
 	else 
 	{
-		while (m_tempNode->m_key != nullptr)
+		while (tempNode->m_key != nullptr && key > *(tempNode->m_key))
 		{
-			tempNode
+			tempNode = tempNode->m_next;
 		}
 	}
 
+	if (tempNode->m_key == nullptr) //end of list
+	{
+		std::shared_ptr<ListKeyValNode<K,V>> end = tempNode->m_prev.lock();
+		end->m_next = thingToInsert;
+		thingToInsert->m_prev = end;
+//		tempNode = thingToInsert;
+	}
+	else if (*(tempNode->m_key) == key) // == key
+	{
+		*(tempNode->m_val) = val;
+	}
+	else 
+	{
+		thingToInsert->m_next = tempNode;
+		thingToInsert->m_prev = tempNode->m_prev;
+		auto end = tempNode->m_prev.lock();
+		end->m_next = thingToInsert;
+		tempNode->m_prev = thingToInsert;
+//		tempNode->m_next = thingToInsert;
+	}
+
+
+	return m_rootNode;
 
 
 
@@ -262,12 +292,18 @@ private:
   {
 	std::shared_ptr<ListKeyValNode<K,V>> tempNode = m_rootNode;
 
+	if (m_rootNode->m_key != nullptr && key == *(m_rootNode->m_key))
+	{
+		m_rootNode->m_next->m_prev.reset();
+		return m_rootNode->m_next;
+	}
+
 	while (tempNode->m_key != nullptr && key >= *(tempNode->m_key))
 	{
-		if (key == *(tempNode->m_next->m_key))
+		if (key == *(tempNode->m_key))
 		{
-			tempNode->m_next->m_next->m_prev = tempNode;
-			tempNode->m_next = tempNode->m_next->m_next;
+			tempNode->m_next->m_prev = tempNode->m_prev;
+			tempNode->m_prev.lock()->m_next = tempNode->m_next;
 			return m_rootNode;
 		}
 		else 
