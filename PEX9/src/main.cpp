@@ -18,28 +18,30 @@ int main ()
 
 	RBTWO = rbt; //does this work
 
-	std::cout << std::endl << std::endl << "Full iteration:" << std::endl;
- 	rbt.forEach([](const int &key, std::string &val){
-    	std::cout << "Key: " << key << std::endl;
-    	std::cout << "Val: " << val << std::endl;
-  	});
-		
-	std::cout << std::endl << std::endl << "Deleted item \"three" << std::endl;
-	rbt.del(3);
+	rbt.printTree();
 
-	std::cout << std::endl << std::endl << "After Del:" << std::endl;
-        rbt.forEach([](const int &key, std::string &val){
-        std::cout << "Key: " << key << std::endl;
-        std::cout << "Val: " << val << std::endl;
-        });
+	//std::cout << std::endl << std::endl << "Full iteration:" << std::endl;
+ 	//rbt.forEach([](const int &key, std::string &val){
+    	//std::cout << "Key: " << key << std::endl;
+    	//std::cout << "Val: " << val << std::endl;
+  	//});
+	//	
+	//std::cout << std::endl << std::endl << "Deleted item \"three" << std::endl;
+	//rbt.del(3);
 
-	std::cout << std::endl << std::endl << "Deep Copy?" << std::endl;
+	//std::cout << std::endl << std::endl << "After Del:" << std::endl;
+        //rbt.forEach([](const int &key, std::string &val){
+        //std::cout << "Key: " << key << std::endl;
+        //std::cout << "Val: " << val << std::endl;
+        //});
+
+	//std::cout << std::endl << std::endl << "Deep Copy?" << std::endl;
 	
-	std::cout << std::endl << std::endl << "RBTWO:" << std::endl;
-        RBTWO.forEach([](const int &key, std::string &val){
-        std::cout << "Key: " << key << std::endl;
-        std::cout << "Val: " << val << std::endl;
-        });
+	//std::cout << std::endl << std::endl << "RBTWO:" << std::endl;
+        //RBTWO.forEach([](const int &key, std::string &val){
+        //std::cout << "Key: " << key << std::endl;
+        //std::cout << "Val: " << val << std::endl;
+        //});
 
 
 }

@@ -2,6 +2,7 @@
 
 #include "KeyVal.hpp"
 #include <iostream>
+#include <list>
 
 enum color
 {
@@ -100,6 +101,73 @@ class RBTKeyVal : public KeyVal<K,V>
 		{
 			forEachInternal(callback, m_rootNode);
 		}
+		
+	/*
+ 	* Nates Code		
+ 	*/
+
+	//get red code
+	bool getColor(std::shared_ptr<RBTKeyValNode<K,V>> current)
+	{
+		if (current->m_color == red)
+			return true;
+		else 
+			return false;
+	}
+	
+	void printTree()
+	{
+		//create some working variables on stack
+		//and initially populate
+	
+		std::list<std::shared_ptr<RBTKeyValNode<K,V>>> workList;
+		std::list<int> levelList;
+		workList.push_back(m_rootNode);
+		levelList.push_back(0);
+	
+		//while more nodes exist for BFS
+		while(!workList.empty())
+		{
+			//determine information for current vertex
+			auto pCurrent = workList.front();
+			auto level = levelList.front();
+			auto pParent = getParent(pCurrent); //PARENT FUNCTION
+			auto color = (getColor(pCurrent)) ? "RED" : "BLACK";//NEEDS IS RED
+
+			//remove current vertex from working lists
+			workList.pop_front();
+			levelList.pop_front();
+
+			//print the node
+			std::cout << "{k:" << *(pCurrent->m_key) << ", "; //KEY
+			std::cout << "C:" << color << ", ";		//COLOR
+			std::cout << "L:" << level << ", ";		//LEVEL
+			if(pParent)
+				std::cout << "PK:" << *(pParent->m_key) << "}";
+			else 
+				std::cout << "PK:NULL}";
+
+			//add left child to work list if valid 
+			if (pCurrent->m_left->m_key)
+			{
+				workList.push_back(pCurrent->m_left);
+				levelList.push_back(level + 1);
+			}
+			//add right child to work list if valid 
+			if (pCurrent->m_right->m_key)
+			{
+				workList.push_back(pCurrent->m_right);
+				levelList.push_back(level + 1);
+			}
+
+			//print new line when level changes
+			if(!levelList.empty() && (level != levelList.front()))
+				std::cout << std::endl;
+		}		
+		//new line at end of traversal
+		std::cout << std::endl;
+	}	
+		
 	private:
 		
 	//Helpers
@@ -152,7 +220,7 @@ class RBTKeyVal : public KeyVal<K,V>
 		if (m_rootNode == nullptr)
 		{
 			m_rootNode = thingToInsert;
-			m_rootNode->m_color = black;
+			//m_rootNode->m_color = black;
 		}	
 		else 
 		{
@@ -166,12 +234,14 @@ class RBTKeyVal : public KeyVal<K,V>
 			}
 			else if (key < *(current->m_key))
 				{
-				thingToInsert->m_prev = current;
+				//current->m_left->m_prev = current;
+				//current->m_right->m_prev = current;
 				insertInternal(key,val, current->m_left);
 				}
 			else 
 				{
-				thingToInsert->m_prev = current;
+				//current->m_left->m_prev = current;
+				//current->m_right->m_prev = current;
 				insertInternal(key,val, current->m_right);
 				}
 		}
@@ -271,6 +341,7 @@ class RBTKeyVal : public KeyVal<K,V>
 
 		if (grandParent == nullptr)
 		{
+			current->m_color = black;
 			return;
 		}	
 		else if (parent->m_color == red && uncle->m_color == red)
@@ -312,9 +383,6 @@ class RBTKeyVal : public KeyVal<K,V>
 		
 	
 	}
-
-
-	
 	
 	/*
 	 * Delete is from regular binary tree
