@@ -87,7 +87,10 @@ class RBTKeyVal : public KeyVal<K,V>
 
 		virtual void insert (const K &key, const V &val) override
 		{
-			insertInternal(key,val,m_rootNode);
+			std::shared_ptr<RBTKeyValNode<K,V>> parent;
+			parent = getParent(m_rootNode);
+
+			insertInternal(key,val,parent, m_rootNode);
 		}
 		virtual void del (const K &key) override
 		{
@@ -199,7 +202,7 @@ class RBTKeyVal : public KeyVal<K,V>
 	}
 
 
-	void insertInternal(const K &key, const V &val,std::shared_ptr<RBTKeyValNode<K,V>> &current)
+	void insertInternal(const K &key, const V &val, std::shared_ptr<RBTKeyValNode<K,V>> &parent, std::shared_ptr<RBTKeyValNode<K,V>> &current)
 	{
 		auto thingToInsert = std::shared_ptr<RBTKeyValNode<K,V>>(new RBTKeyValNode<K,V>());
 		thingToInsert->m_key.reset(new K(key));
@@ -209,56 +212,43 @@ class RBTKeyVal : public KeyVal<K,V>
 		thingToInsert->m_left.reset(new RBTKeyValNode<K,V>());
 			thingToInsert->m_left->m_color = black;//null black
 		thingToInsert->m_color = red;
-
-		//std::shared_ptr<BSTKeyValNode<K,V>> parent;
-		//std::shared_ptr<BSTKeyValNode<K,V>> grandParent;
-
-		//parent = getParent(current);
-		//grandParent = getGrandParent(current);
-		
 	
 		if (m_rootNode == nullptr)
 		{
 			m_rootNode = thingToInsert;
 			m_rootNode->m_left->m_prev = m_rootNode;
 			m_rootNode->m_right->m_prev = m_rootNode;
-			//m_rootNode->m_color = black;
+			m_rootNode->m_color = black;
 		}	
 		else 
 		{
+		
 			if(current->m_key == nullptr)
 			{	
 				current = thingToInsert;
+				current->m_prev = parent;
+				current->m_color = red;
 				recolor(current);
-				//current->m_left->m_prev = current;
-				//current->m_right->m_prev = current;
-				
 			}
-			if (key == *(current->m_key))
+			else if (key == *(current->m_key))
 			{
 				*(current->m_val) = val;
 			}
 			else if (key < *(current->m_key))
 				{
-				current->m_left->m_prev = current;
-                                current->m_right->m_prev = current;
-				insertInternal(key,val, current->m_left);
+				insertInternal(key,val, current, current->m_left);
 				}
 			else if (key > *(current->m_key)) 
 				{
-				current->m_left->m_prev = current;
-                                current->m_right->m_prev = current;
-				insertInternal(key,val, current->m_right);
+				insertInternal(key,val, current, current->m_right);
 				}
-			else 
-			{
-				current = thingToInsert;
-				recolor(current);
-			}
+			//else 
+			//{
+			//	current = thingToInsert;
+			//	current->m_prev = parent;
+			//	recolor(current);
+			//}
 		}
-		
-		//recolor(current);
-		
 		
 	}
 
@@ -308,31 +298,57 @@ class RBTKeyVal : public KeyVal<K,V>
 		
 	}
 
-	void rotateRight(std::shared_ptr<RBTKeyValNode<K,V>> current)
+	inline std::shared_ptr<RBTKeyValNode<K,V>>* getRef(std::shared_ptr<RBTKeyValNode<K,V>> &node)
 	{
-		std::shared_ptr<RBTKeyValNode<K,V>> parent;
-		parent = getParent(current);
+		if (node == m_rootNode)
+		{
+			return &m_rootNode;
+		}
 		
-		parent->m_left = current->m_right;
-		current->m_right = parent;
-		parent->m_prev = current;
+		auto parent = getParent(node);
+		if (node == parent->m_left)
+		{
+			return &(parent->m_left);
+		}
+		if (node == parent->m_right)
+		{
+			return &(parent->m_right);
+		}
 		
+		return nullptr;
+	}
 
-		if(*(parent->m_key) == *(m_rootNode->m_key))
-			m_rootNode = current;	
+	void rotateRight(std::shared_ptr<RBTKeyValNode<K,V>> parent)
+	{
+		std::shared_ptr<RBTKeyValNode<K,V>> grandParent;
+		grandParent = getParent(parent);
+		auto ref = getRef(grandParent);
+
+		grandParent->m_left = parent->m_right; 
+		parent->m_right->m_prev = grandParent;
+		parent->m_right = grandParent;
+		parent->m_prev = grandParent->m_prev;
+		grandParent->m_prev = parent;
+		
+		
+		std::swap(parent->m_color,grandParent->m_color);
+		*ref = parent;
+			
 	}
 	
-	void rotateLeft(std::shared_ptr<RBTKeyValNode<K,V>> current)
+	void rotateLeft(std::shared_ptr<RBTKeyValNode<K,V>> parent)
 	{
-		std::shared_ptr<RBTKeyValNode<K,V>> parent;
-		parent = getParent(current);
-
-		parent->m_right = current->m_left;
-		current->m_left = parent;
-		parent->m_prev = current;
+		std::shared_ptr<RBTKeyValNode<K,V>> grandParent;
+		grandParent = getParent(parent);
+		auto ref = getRef(grandParent);
 		
-		if(*(parent->m_key) == *(m_rootNode->m_key))
-			m_rootNode = current;
+		grandParent->m_right = parent->m_left;
+		parent->m_left->m_prev = grandParent;
+		parent->m_left = grandParent;
+		parent->m_prev = grandParent->m_prev;
+		grandParent->m_prev = parent;
+		
+		*ref = parent;
 	}
 
 	void recolor(std::shared_ptr<RBTKeyValNode<K,V>> current)
@@ -350,46 +366,48 @@ class RBTKeyVal : public KeyVal<K,V>
 		
 		
 
-		if (grandParent == nullptr)
+		if (parent == nullptr)
 		{
 			current->m_color = black;
+			return;
+		}
+		if (grandParent == nullptr) {
 			return;
 		}	
 		else if (parent->m_color == red && uncle->m_color == red)
 		{
-			if (parent == nullptr)
-			{
-				current->m_color = black;
-				return;
-			}
-			else 
-			{
 				parent->m_color = black;
 				uncle->m_color = black;
 				grandParent->m_color = red;
 				recolor(grandParent);
-			}
 		}
 		else 
 		{
-			if(*(parent->m_key) > *(current->m_key) && *(current->m_key) > *(current->m_left->m_key))
+
+			
+			if(grandParent->m_left == parent && parent->m_left == current)
 			{//left left
 				rotateRight(parent);
+				std::swap(parent->m_color,parent->m_right->m_color);
 			}
-			else if (*(parent->m_key) < *(current->m_key) && *(current->m_key) < *(current->m_left->m_key))
+			else if (grandParent->m_right == parent && parent->m_right == current)
 			{//right right
 				rotateLeft(parent);
+				std::swap(parent->m_color, parent->m_left->m_color);
 			}
-			else if (*(parent->m_key) > *(current->m_key) && *(current->m_key) < *(current->m_left->m_key))
+			else if (grandParent->m_left == parent && parent->m_right == current)
 			{//left right
 				rotateLeft(current);
 				rotateRight(parent);
+				std::swap(parent->m_color, parent->m_prev.lock()->m_color);
 			}
 			else 
 			{//left right
 				rotateRight(current);
 				rotateLeft(parent);
+				std::swap(parent->m_color, parent->m_prev.lock()->m_color);
 			}
+
 		}
 		
 	
