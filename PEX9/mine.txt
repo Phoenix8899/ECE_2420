@@ -1,0 +1,759 @@
+Insert 80
+{k:80, C:BLACK, L:0, PK:NULL}
+
+Insert 81
+{k:80, C:BLACK, L:0, PK:NULL}
+{k:81, C:RED, L:1, PK:80}
+
+Insert 82
+{k:81, C:BLACK, L:0, PK:NULL}
+{k:80, C:RED, L:1, PK:81}{k:82, C:RED, L:1, PK:81}
+
+Insert 83
+{k:81, C:BLACK, L:0, PK:NULL}
+{k:80, C:BLACK, L:1, PK:81}{k:82, C:BLACK, L:1, PK:81}
+{k:83, C:RED, L:2, PK:82}
+
+Insert 84
+{k:81, C:BLACK, L:0, PK:NULL}
+{k:80, C:BLACK, L:1, PK:81}{k:83, C:BLACK, L:1, PK:81}
+{k:82, C:RED, L:2, PK:83}{k:84, C:RED, L:2, PK:83}
+
+Insert 85
+{k:81, C:BLACK, L:0, PK:NULL}
+{k:80, C:BLACK, L:1, PK:81}{k:83, C:RED, L:1, PK:81}
+{k:82, C:BLACK, L:2, PK:83}{k:84, C:BLACK, L:2, PK:83}
+{k:85, C:RED, L:3, PK:84}
+
+Insert 86
+{k:81, C:BLACK, L:0, PK:NULL}
+{k:80, C:BLACK, L:1, PK:81}{k:83, C:RED, L:1, PK:81}
+{k:82, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}
+{k:84, C:RED, L:3, PK:85}{k:86, C:RED, L:3, PK:85}
+
+Insert 87
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:RED, L:1, PK:83}{k:85, C:RED, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:84, C:BLACK, L:2, PK:85}{k:86, C:BLACK, L:2, PK:85}
+{k:87, C:RED, L:3, PK:86}
+
+Insert 88
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:RED, L:1, PK:83}{k:85, C:RED, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:84, C:BLACK, L:2, PK:85}{k:87, C:BLACK, L:2, PK:85}
+{k:86, C:RED, L:3, PK:87}{k:88, C:RED, L:3, PK:87}
+
+Insert 89
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:85, C:BLACK, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:84, C:BLACK, L:2, PK:85}{k:87, C:RED, L:2, PK:85}
+{k:86, C:BLACK, L:3, PK:87}{k:88, C:BLACK, L:3, PK:87}
+{k:89, C:RED, L:4, PK:88}
+
+Insert 90
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:85, C:BLACK, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:84, C:BLACK, L:2, PK:85}{k:87, C:RED, L:2, PK:85}
+{k:86, C:BLACK, L:3, PK:87}{k:89, C:BLACK, L:3, PK:87}
+{k:88, C:RED, L:4, PK:89}{k:90, C:RED, L:4, PK:89}
+
+Insert 91
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:87, C:BLACK, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:85, C:RED, L:2, PK:87}{k:89, C:RED, L:2, PK:87}
+{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}
+{k:91, C:RED, L:4, PK:90}
+
+Insert 92
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:87, C:BLACK, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:85, C:RED, L:2, PK:87}{k:89, C:RED, L:2, PK:87}
+{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:91, C:BLACK, L:3, PK:89}
+{k:90, C:RED, L:4, PK:91}{k:92, C:RED, L:4, PK:91}
+
+Insert 93
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:87, C:RED, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:85, C:BLACK, L:2, PK:87}{k:89, C:BLACK, L:2, PK:87}
+{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:91, C:RED, L:3, PK:89}
+{k:90, C:BLACK, L:4, PK:91}{k:92, C:BLACK, L:4, PK:91}
+{k:93, C:RED, L:5, PK:92}
+
+Insert 94
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:87, C:RED, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:85, C:BLACK, L:2, PK:87}{k:89, C:BLACK, L:2, PK:87}
+{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:91, C:RED, L:3, PK:89}
+{k:90, C:BLACK, L:4, PK:91}{k:93, C:BLACK, L:4, PK:91}
+{k:92, C:RED, L:5, PK:93}{k:94, C:RED, L:5, PK:93}
+
+Insert 95
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:87, C:RED, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:85, C:BLACK, L:2, PK:87}{k:91, C:BLACK, L:2, PK:87}
+{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:89, C:RED, L:3, PK:91}{k:93, C:RED, L:3, PK:91}
+{k:88, C:BLACK, L:4, PK:89}{k:90, C:BLACK, L:4, PK:89}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}
+{k:95, C:RED, L:5, PK:94}
+
+Insert 96
+{k:83, C:BLACK, L:0, PK:NULL}
+{k:81, C:BLACK, L:1, PK:83}{k:87, C:RED, L:1, PK:83}
+{k:80, C:BLACK, L:2, PK:81}{k:82, C:BLACK, L:2, PK:81}{k:85, C:BLACK, L:2, PK:87}{k:91, C:BLACK, L:2, PK:87}
+{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:89, C:RED, L:3, PK:91}{k:93, C:RED, L:3, PK:91}
+{k:88, C:BLACK, L:4, PK:89}{k:90, C:BLACK, L:4, PK:89}{k:92, C:BLACK, L:4, PK:93}{k:95, C:BLACK, L:4, PK:93}
+{k:94, C:RED, L:5, PK:95}{k:96, C:RED, L:5, PK:95}
+
+Insert 97
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:93, C:BLACK, L:2, PK:91}
+{k:80, C:BLACK, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:92, C:BLACK, L:3, PK:93}{k:95, C:RED, L:3, PK:93}
+{k:94, C:BLACK, L:4, PK:95}{k:96, C:BLACK, L:4, PK:95}
+{k:97, C:RED, L:5, PK:96}
+
+Insert 98
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:93, C:BLACK, L:2, PK:91}
+{k:80, C:BLACK, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:92, C:BLACK, L:3, PK:93}{k:95, C:RED, L:3, PK:93}
+{k:94, C:BLACK, L:4, PK:95}{k:97, C:BLACK, L:4, PK:95}
+{k:96, C:RED, L:5, PK:97}{k:98, C:RED, L:5, PK:97}
+
+Insert 99
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:80, C:BLACK, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:99, C:RED, L:5, PK:98}
+
+Insert 20
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:80, C:BLACK, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:20, C:RED, L:4, PK:80}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:99, C:RED, L:5, PK:98}
+
+Insert 19
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:20, C:BLACK, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:19, C:RED, L:4, PK:20}{k:80, C:RED, L:4, PK:20}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:99, C:RED, L:5, PK:98}
+
+Insert 18
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:20, C:RED, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:19, C:BLACK, L:4, PK:20}{k:80, C:BLACK, L:4, PK:20}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:18, C:RED, L:5, PK:19}{k:99, C:RED, L:5, PK:98}
+
+Insert 17
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:81, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:20, C:RED, L:3, PK:81}{k:82, C:BLACK, L:3, PK:81}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:18, C:BLACK, L:4, PK:20}{k:80, C:BLACK, L:4, PK:20}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:17, C:RED, L:5, PK:18}{k:19, C:RED, L:5, PK:18}{k:99, C:RED, L:5, PK:98}
+
+Insert 16
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:20, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:18, C:RED, L:3, PK:20}{k:81, C:RED, L:3, PK:20}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:16, C:RED, L:5, PK:17}{k:99, C:RED, L:5, PK:98}
+
+Insert 15
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:RED, L:1, PK:87}{k:91, C:RED, L:1, PK:87}
+{k:20, C:BLACK, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:18, C:RED, L:3, PK:20}{k:81, C:RED, L:3, PK:20}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:16, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:15, C:RED, L:5, PK:16}{k:17, C:RED, L:5, PK:16}{k:99, C:RED, L:5, PK:98}
+
+Insert 14
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:20, C:RED, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:18, C:BLACK, L:3, PK:20}{k:81, C:BLACK, L:3, PK:20}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:16, C:RED, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:15, C:BLACK, L:5, PK:16}{k:17, C:BLACK, L:5, PK:16}{k:99, C:RED, L:5, PK:98}
+{k:14, C:RED, L:6, PK:15}
+
+Insert 13
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:20, C:RED, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:18, C:BLACK, L:3, PK:20}{k:81, C:BLACK, L:3, PK:20}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:16, C:RED, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:14, C:BLACK, L:5, PK:16}{k:17, C:BLACK, L:5, PK:16}{k:99, C:RED, L:5, PK:98}
+{k:13, C:RED, L:6, PK:14}{k:15, C:RED, L:6, PK:14}
+
+Insert 12
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:20, C:RED, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:16, C:BLACK, L:3, PK:20}{k:81, C:BLACK, L:3, PK:20}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:14, C:RED, L:4, PK:16}{k:18, C:RED, L:4, PK:16}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:99, C:RED, L:5, PK:98}
+{k:12, C:RED, L:6, PK:13}
+
+Insert 11
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:83, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:20, C:RED, L:2, PK:83}{k:85, C:BLACK, L:2, PK:83}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:16, C:BLACK, L:3, PK:20}{k:81, C:BLACK, L:3, PK:20}{k:84, C:BLACK, L:3, PK:85}{k:86, C:BLACK, L:3, PK:85}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:14, C:RED, L:4, PK:16}{k:18, C:RED, L:4, PK:16}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:12, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:99, C:RED, L:5, PK:98}
+{k:11, C:RED, L:6, PK:12}{k:13, C:RED, L:6, PK:12}
+
+Insert 10
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:RED, L:2, PK:20}{k:83, C:RED, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:14, C:BLACK, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:12, C:RED, L:4, PK:14}{k:15, C:BLACK, L:4, PK:14}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:11, C:BLACK, L:5, PK:12}{k:13, C:BLACK, L:5, PK:12}{k:99, C:RED, L:5, PK:98}
+{k:10, C:RED, L:6, PK:11}
+
+Insert 9
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:RED, L:2, PK:20}{k:83, C:RED, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:14, C:BLACK, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:12, C:RED, L:4, PK:14}{k:15, C:BLACK, L:4, PK:14}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:10, C:BLACK, L:5, PK:12}{k:13, C:BLACK, L:5, PK:12}{k:99, C:RED, L:5, PK:98}
+{k:9, C:RED, L:6, PK:10}{k:11, C:RED, L:6, PK:10}
+
+Insert 8
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:RED, L:2, PK:20}{k:83, C:RED, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:12, C:BLACK, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:10, C:RED, L:4, PK:12}{k:14, C:RED, L:4, PK:12}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:99, C:RED, L:5, PK:98}
+{k:8, C:RED, L:6, PK:9}
+
+Insert 7
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:BLACK, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:RED, L:2, PK:20}{k:83, C:RED, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:12, C:BLACK, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:10, C:RED, L:4, PK:12}{k:14, C:RED, L:4, PK:12}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:8, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:99, C:RED, L:5, PK:98}
+{k:7, C:RED, L:6, PK:8}{k:9, C:RED, L:6, PK:8}
+
+Insert 6
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:12, C:RED, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:10, C:BLACK, L:4, PK:12}{k:14, C:BLACK, L:4, PK:12}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:8, C:RED, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:99, C:RED, L:5, PK:98}
+{k:7, C:BLACK, L:6, PK:8}{k:9, C:BLACK, L:6, PK:8}
+{k:6, C:RED, L:7, PK:7}
+
+Insert 5
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:12, C:RED, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:10, C:BLACK, L:4, PK:12}{k:14, C:BLACK, L:4, PK:12}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:8, C:RED, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:99, C:RED, L:5, PK:98}
+{k:6, C:BLACK, L:6, PK:8}{k:9, C:BLACK, L:6, PK:8}
+{k:5, C:RED, L:7, PK:6}{k:7, C:RED, L:7, PK:6}
+
+Insert 4
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:12, C:RED, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:8, C:BLACK, L:4, PK:12}{k:14, C:BLACK, L:4, PK:12}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:6, C:RED, L:5, PK:8}{k:10, C:RED, L:5, PK:8}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:99, C:RED, L:5, PK:98}
+{k:5, C:BLACK, L:6, PK:6}{k:7, C:BLACK, L:6, PK:6}{k:9, C:BLACK, L:6, PK:10}{k:11, C:BLACK, L:6, PK:10}
+{k:4, C:RED, L:7, PK:5}
+
+Insert 3
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:16, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:12, C:RED, L:3, PK:16}{k:18, C:BLACK, L:3, PK:16}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:8, C:BLACK, L:4, PK:12}{k:14, C:BLACK, L:4, PK:12}{k:17, C:BLACK, L:4, PK:18}{k:19, C:BLACK, L:4, PK:18}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:6, C:RED, L:5, PK:8}{k:10, C:RED, L:5, PK:8}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:99, C:RED, L:5, PK:98}
+{k:4, C:BLACK, L:6, PK:6}{k:7, C:BLACK, L:6, PK:6}{k:9, C:BLACK, L:6, PK:10}{k:11, C:BLACK, L:6, PK:10}
+{k:3, C:RED, L:7, PK:4}{k:5, C:RED, L:7, PK:4}
+
+Insert 2
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:99, C:RED, L:5, PK:98}
+{k:3, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}
+{k:2, C:RED, L:7, PK:3}
+
+Insert 1
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 40
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:80, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:40, C:RED, L:5, PK:80}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 39
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:40, C:BLACK, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:39, C:RED, L:5, PK:40}{k:80, C:RED, L:5, PK:40}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 38
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:40, C:RED, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:39, C:BLACK, L:5, PK:40}{k:80, C:BLACK, L:5, PK:40}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:38, C:RED, L:6, PK:39}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 37
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:81, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:40, C:RED, L:4, PK:81}{k:82, C:BLACK, L:4, PK:81}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:38, C:BLACK, L:5, PK:40}{k:80, C:BLACK, L:5, PK:40}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:37, C:RED, L:6, PK:38}{k:39, C:RED, L:6, PK:38}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 36
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:40, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:38, C:RED, L:4, PK:40}{k:81, C:RED, L:4, PK:40}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:36, C:RED, L:6, PK:37}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 35
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:40, C:BLACK, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:38, C:RED, L:4, PK:40}{k:81, C:RED, L:4, PK:40}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:36, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:35, C:RED, L:6, PK:36}{k:37, C:RED, L:6, PK:36}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}
+
+Insert 34
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:40, C:RED, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:38, C:BLACK, L:4, PK:40}{k:81, C:BLACK, L:4, PK:40}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:36, C:RED, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:35, C:BLACK, L:6, PK:36}{k:37, C:BLACK, L:6, PK:36}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:34, C:RED, L:7, PK:35}
+
+Insert 33
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:40, C:RED, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:38, C:BLACK, L:4, PK:40}{k:81, C:BLACK, L:4, PK:40}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:36, C:RED, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:34, C:BLACK, L:6, PK:36}{k:37, C:BLACK, L:6, PK:36}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:33, C:RED, L:7, PK:34}{k:35, C:RED, L:7, PK:34}
+
+Insert 32
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:40, C:RED, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:36, C:BLACK, L:4, PK:40}{k:81, C:BLACK, L:4, PK:40}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:34, C:RED, L:5, PK:36}{k:38, C:RED, L:5, PK:36}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:32, C:RED, L:7, PK:33}
+
+Insert 31
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:83, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:40, C:RED, L:3, PK:83}{k:85, C:BLACK, L:3, PK:83}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:36, C:BLACK, L:4, PK:40}{k:81, C:BLACK, L:4, PK:40}{k:84, C:BLACK, L:4, PK:85}{k:86, C:BLACK, L:4, PK:85}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:34, C:RED, L:5, PK:36}{k:38, C:RED, L:5, PK:36}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:32, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:31, C:RED, L:7, PK:32}{k:33, C:RED, L:7, PK:32}
+
+Insert 30
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:RED, L:3, PK:40}{k:83, C:RED, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:34, C:BLACK, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:32, C:RED, L:5, PK:34}{k:35, C:BLACK, L:5, PK:34}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:31, C:BLACK, L:6, PK:32}{k:33, C:BLACK, L:6, PK:32}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:30, C:RED, L:7, PK:31}
+
+Insert 29
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:RED, L:3, PK:40}{k:83, C:RED, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:34, C:BLACK, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:32, C:RED, L:5, PK:34}{k:35, C:BLACK, L:5, PK:34}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:30, C:BLACK, L:6, PK:32}{k:33, C:BLACK, L:6, PK:32}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:29, C:RED, L:7, PK:30}{k:31, C:RED, L:7, PK:30}
+
+Insert 28
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:RED, L:3, PK:40}{k:83, C:RED, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:32, C:BLACK, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:30, C:RED, L:5, PK:32}{k:34, C:RED, L:5, PK:32}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:28, C:RED, L:7, PK:29}
+
+Insert 27
+{k:87, C:BLACK, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:RED, L:3, PK:40}{k:83, C:RED, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:32, C:BLACK, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:30, C:RED, L:5, PK:32}{k:34, C:RED, L:5, PK:32}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:28, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:27, C:RED, L:7, PK:28}{k:29, C:RED, L:7, PK:28}
+
+Insert 26
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:32, C:RED, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:30, C:BLACK, L:5, PK:32}{k:34, C:BLACK, L:5, PK:32}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:28, C:RED, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:27, C:BLACK, L:7, PK:28}{k:29, C:BLACK, L:7, PK:28}
+{k:26, C:RED, L:8, PK:27}
+
+Insert 25
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:32, C:RED, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:30, C:BLACK, L:5, PK:32}{k:34, C:BLACK, L:5, PK:32}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:28, C:RED, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:26, C:BLACK, L:7, PK:28}{k:29, C:BLACK, L:7, PK:28}
+{k:25, C:RED, L:8, PK:26}{k:27, C:RED, L:8, PK:26}
+
+Insert 24
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:32, C:RED, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:28, C:BLACK, L:5, PK:32}{k:34, C:BLACK, L:5, PK:32}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:26, C:RED, L:6, PK:28}{k:30, C:RED, L:6, PK:28}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:25, C:BLACK, L:7, PK:26}{k:27, C:BLACK, L:7, PK:26}{k:29, C:BLACK, L:7, PK:30}{k:31, C:BLACK, L:7, PK:30}
+{k:24, C:RED, L:8, PK:25}
+
+Insert 23
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:36, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:32, C:RED, L:4, PK:36}{k:38, C:BLACK, L:4, PK:36}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:28, C:BLACK, L:5, PK:32}{k:34, C:BLACK, L:5, PK:32}{k:37, C:BLACK, L:5, PK:38}{k:39, C:BLACK, L:5, PK:38}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:26, C:RED, L:6, PK:28}{k:30, C:RED, L:6, PK:28}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:24, C:BLACK, L:7, PK:26}{k:27, C:BLACK, L:7, PK:26}{k:29, C:BLACK, L:7, PK:30}{k:31, C:BLACK, L:7, PK:30}
+{k:23, C:RED, L:8, PK:24}{k:25, C:RED, L:8, PK:24}
+
+Insert 22
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:23, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}
+{k:22, C:RED, L:8, PK:23}
+
+Insert 21
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}
+
+Insert 60
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:BLACK, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}
+
+Insert 61
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}
+
+Insert 62
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:62, C:RED, L:8, PK:61}
+
+Insert 63
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:62, C:BLACK, L:7, PK:60}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:RED, L:8, PK:62}{k:63, C:RED, L:8, PK:62}
+
+Insert 64
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:62, C:RED, L:7, PK:60}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:62}{k:63, C:BLACK, L:8, PK:62}
+{k:64, C:RED, L:9, PK:63}
+
+Insert 65
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:62, C:RED, L:7, PK:60}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:62}{k:64, C:BLACK, L:8, PK:62}
+{k:63, C:RED, L:9, PK:64}{k:65, C:RED, L:9, PK:64}
+
+Insert 66
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:62, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:60, C:RED, L:7, PK:62}{k:64, C:RED, L:7, PK:62}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:60}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}
+{k:66, C:RED, L:9, PK:65}
+
+Insert 67
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:81, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:80, C:RED, L:5, PK:81}{k:82, C:BLACK, L:5, PK:81}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:62, C:RED, L:6, PK:80}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:60, C:RED, L:7, PK:62}{k:64, C:RED, L:7, PK:62}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:60}{k:63, C:BLACK, L:8, PK:64}{k:66, C:BLACK, L:8, PK:64}
+{k:65, C:RED, L:9, PK:66}{k:67, C:RED, L:9, PK:66}
+
+Insert 68
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:RED, L:5, PK:80}{k:81, C:RED, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:64, C:BLACK, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:63, C:BLACK, L:7, PK:64}{k:66, C:RED, L:7, PK:64}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:65, C:BLACK, L:8, PK:66}{k:67, C:BLACK, L:8, PK:66}
+{k:68, C:RED, L:9, PK:67}
+
+Insert 69
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:RED, L:5, PK:80}{k:81, C:RED, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:64, C:BLACK, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:63, C:BLACK, L:7, PK:64}{k:66, C:RED, L:7, PK:64}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:65, C:BLACK, L:8, PK:66}{k:68, C:BLACK, L:8, PK:66}
+{k:67, C:RED, L:9, PK:68}{k:69, C:RED, L:9, PK:68}
+
+Insert 70
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:RED, L:5, PK:80}{k:81, C:RED, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:66, C:BLACK, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:64, C:RED, L:7, PK:66}{k:68, C:RED, L:7, PK:66}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:69, C:BLACK, L:8, PK:68}
+{k:70, C:RED, L:9, PK:69}
+
+Insert 71
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:BLACK, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:RED, L:5, PK:80}{k:81, C:RED, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:66, C:BLACK, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:64, C:RED, L:7, PK:66}{k:68, C:RED, L:7, PK:66}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:70, C:BLACK, L:8, PK:68}
+{k:69, C:RED, L:9, PK:70}{k:71, C:RED, L:9, PK:70}
+
+Insert 72
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:66, C:RED, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:64, C:BLACK, L:7, PK:66}{k:68, C:BLACK, L:7, PK:66}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:70, C:RED, L:8, PK:68}
+{k:69, C:BLACK, L:9, PK:70}{k:71, C:BLACK, L:9, PK:70}
+{k:72, C:RED, L:10, PK:71}
+
+Insert 73
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:66, C:RED, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:64, C:BLACK, L:7, PK:66}{k:68, C:BLACK, L:7, PK:66}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:70, C:RED, L:8, PK:68}
+{k:69, C:BLACK, L:9, PK:70}{k:72, C:BLACK, L:9, PK:70}
+{k:71, C:RED, L:10, PK:72}{k:73, C:RED, L:10, PK:72}
+
+Insert 74
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:66, C:RED, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:64, C:BLACK, L:7, PK:66}{k:70, C:BLACK, L:7, PK:66}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:68, C:RED, L:8, PK:70}{k:72, C:RED, L:8, PK:70}
+{k:67, C:BLACK, L:9, PK:68}{k:69, C:BLACK, L:9, PK:68}{k:71, C:BLACK, L:9, PK:72}{k:73, C:BLACK, L:9, PK:72}
+{k:74, C:RED, L:10, PK:73}
+
+Insert 75
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:62, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:60, C:BLACK, L:6, PK:62}{k:66, C:RED, L:6, PK:62}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:61, C:BLACK, L:7, PK:60}{k:64, C:BLACK, L:7, PK:66}{k:70, C:BLACK, L:7, PK:66}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:68, C:RED, L:8, PK:70}{k:72, C:RED, L:8, PK:70}
+{k:67, C:BLACK, L:9, PK:68}{k:69, C:BLACK, L:9, PK:68}{k:71, C:BLACK, L:9, PK:72}{k:74, C:BLACK, L:9, PK:72}
+{k:73, C:RED, L:10, PK:74}{k:75, C:RED, L:10, PK:74}
+
+Insert 76
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:66, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:62, C:RED, L:6, PK:66}{k:70, C:RED, L:6, PK:66}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:60, C:BLACK, L:7, PK:62}{k:64, C:BLACK, L:7, PK:62}{k:68, C:BLACK, L:7, PK:70}{k:72, C:BLACK, L:7, PK:70}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:60}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:69, C:BLACK, L:8, PK:68}{k:71, C:BLACK, L:8, PK:72}{k:74, C:RED, L:8, PK:72}
+{k:73, C:BLACK, L:9, PK:74}{k:75, C:BLACK, L:9, PK:74}
+{k:76, C:RED, L:10, PK:75}
+
+Insert 77
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:66, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:62, C:RED, L:6, PK:66}{k:70, C:RED, L:6, PK:66}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:60, C:BLACK, L:7, PK:62}{k:64, C:BLACK, L:7, PK:62}{k:68, C:BLACK, L:7, PK:70}{k:72, C:BLACK, L:7, PK:70}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:60}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:69, C:BLACK, L:8, PK:68}{k:71, C:BLACK, L:8, PK:72}{k:74, C:RED, L:8, PK:72}
+{k:73, C:BLACK, L:9, PK:74}{k:76, C:BLACK, L:9, PK:74}
+{k:75, C:RED, L:10, PK:76}{k:77, C:RED, L:10, PK:76}
+
+Insert 78
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:66, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:62, C:RED, L:6, PK:66}{k:70, C:RED, L:6, PK:66}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:60, C:BLACK, L:7, PK:62}{k:64, C:BLACK, L:7, PK:62}{k:68, C:BLACK, L:7, PK:70}{k:74, C:BLACK, L:7, PK:70}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:60}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:69, C:BLACK, L:8, PK:68}{k:72, C:RED, L:8, PK:74}{k:76, C:RED, L:8, PK:74}
+{k:71, C:BLACK, L:9, PK:72}{k:73, C:BLACK, L:9, PK:72}{k:75, C:BLACK, L:9, PK:76}{k:77, C:BLACK, L:9, PK:76}
+{k:78, C:RED, L:10, PK:77}
+
+Insert 79
+{k:87, C:RED, L:0, PK:NULL}
+{k:20, C:RED, L:1, PK:87}{k:91, C:BLACK, L:1, PK:87}
+{k:12, C:BLACK, L:2, PK:20}{k:40, C:BLACK, L:2, PK:20}{k:89, C:BLACK, L:2, PK:91}{k:95, C:BLACK, L:2, PK:91}
+{k:8, C:RED, L:3, PK:12}{k:16, C:RED, L:3, PK:12}{k:32, C:BLACK, L:3, PK:40}{k:83, C:BLACK, L:3, PK:40}{k:88, C:BLACK, L:3, PK:89}{k:90, C:BLACK, L:3, PK:89}{k:93, C:RED, L:3, PK:95}{k:97, C:RED, L:3, PK:95}
+{k:6, C:BLACK, L:4, PK:8}{k:10, C:BLACK, L:4, PK:8}{k:14, C:BLACK, L:4, PK:16}{k:18, C:BLACK, L:4, PK:16}{k:28, C:RED, L:4, PK:32}{k:36, C:RED, L:4, PK:32}{k:80, C:RED, L:4, PK:83}{k:85, C:BLACK, L:4, PK:83}{k:92, C:BLACK, L:4, PK:93}{k:94, C:BLACK, L:4, PK:93}{k:96, C:BLACK, L:4, PK:97}{k:98, C:BLACK, L:4, PK:97}
+{k:4, C:RED, L:5, PK:6}{k:7, C:BLACK, L:5, PK:6}{k:9, C:BLACK, L:5, PK:10}{k:11, C:BLACK, L:5, PK:10}{k:13, C:BLACK, L:5, PK:14}{k:15, C:BLACK, L:5, PK:14}{k:17, C:BLACK, L:5, PK:18}{k:19, C:BLACK, L:5, PK:18}{k:26, C:BLACK, L:5, PK:28}{k:30, C:BLACK, L:5, PK:28}{k:34, C:BLACK, L:5, PK:36}{k:38, C:BLACK, L:5, PK:36}{k:66, C:BLACK, L:5, PK:80}{k:81, C:BLACK, L:5, PK:80}{k:84, C:BLACK, L:5, PK:85}{k:86, C:BLACK, L:5, PK:85}{k:99, C:RED, L:5, PK:98}
+{k:2, C:BLACK, L:6, PK:4}{k:5, C:BLACK, L:6, PK:4}{k:24, C:RED, L:6, PK:26}{k:27, C:BLACK, L:6, PK:26}{k:29, C:BLACK, L:6, PK:30}{k:31, C:BLACK, L:6, PK:30}{k:33, C:BLACK, L:6, PK:34}{k:35, C:BLACK, L:6, PK:34}{k:37, C:BLACK, L:6, PK:38}{k:39, C:BLACK, L:6, PK:38}{k:62, C:RED, L:6, PK:66}{k:70, C:RED, L:6, PK:66}{k:82, C:BLACK, L:6, PK:81}
+{k:1, C:RED, L:7, PK:2}{k:3, C:RED, L:7, PK:2}{k:22, C:BLACK, L:7, PK:24}{k:25, C:BLACK, L:7, PK:24}{k:60, C:BLACK, L:7, PK:62}{k:64, C:BLACK, L:7, PK:62}{k:68, C:BLACK, L:7, PK:70}{k:74, C:BLACK, L:7, PK:70}
+{k:21, C:RED, L:8, PK:22}{k:23, C:RED, L:8, PK:22}{k:61, C:BLACK, L:8, PK:60}{k:63, C:BLACK, L:8, PK:64}{k:65, C:BLACK, L:8, PK:64}{k:67, C:BLACK, L:8, PK:68}{k:69, C:BLACK, L:8, PK:68}{k:72, C:RED, L:8, PK:74}{k:76, C:RED, L:8, PK:74}
+{k:71, C:BLACK, L:9, PK:72}{k:73, C:BLACK, L:9, PK:72}{k:75, C:BLACK, L:9, PK:76}{k:78, C:BLACK, L:9, PK:76}
+{k:77, C:RED, L:10, PK:78}{k:79, C:RED, L:10, PK:78}
+

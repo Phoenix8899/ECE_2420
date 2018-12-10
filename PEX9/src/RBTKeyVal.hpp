@@ -216,8 +216,7 @@ class RBTKeyVal : public KeyVal<K,V>
 		if (m_rootNode == nullptr)
 		{
 			m_rootNode = thingToInsert;
-			m_rootNode->m_left->m_prev = m_rootNode;
-			m_rootNode->m_right->m_prev = m_rootNode;
+			m_rootNode->m_prev = parent;
 			m_rootNode->m_color = black;
 		}	
 		else 
@@ -242,12 +241,6 @@ class RBTKeyVal : public KeyVal<K,V>
 				{
 				insertInternal(key,val, current, current->m_right);
 				}
-			//else 
-			//{
-			//	current = thingToInsert;
-			//	current->m_prev = parent;
-			//	recolor(current);
-			//}
 		}
 		
 	}
@@ -330,8 +323,6 @@ class RBTKeyVal : public KeyVal<K,V>
 		parent->m_prev = grandParent->m_prev;
 		grandParent->m_prev = parent;
 		
-		
-		std::swap(parent->m_color,grandParent->m_color);
 		*ref = parent;
 			
 	}
@@ -381,35 +372,31 @@ class RBTKeyVal : public KeyVal<K,V>
 				grandParent->m_color = red;
 				recolor(grandParent);
 		}
-		else 
+		else if (parent->m_color == red && uncle->m_color == black)
 		{
-
-			
 			if(grandParent->m_left == parent && parent->m_left == current)
 			{//left left
 				rotateRight(parent);
-				std::swap(parent->m_color,parent->m_right->m_color);
+				std::swap(parent->m_color,grandParent->m_color);
 			}
 			else if (grandParent->m_right == parent && parent->m_right == current)
 			{//right right
 				rotateLeft(parent);
-				std::swap(parent->m_color, parent->m_left->m_color);
+				std::swap(parent->m_color, grandParent->m_color);
 			}
 			else if (grandParent->m_left == parent && parent->m_right == current)
 			{//left right
 				rotateLeft(current);
 				rotateRight(parent);
-				std::swap(parent->m_color, parent->m_prev.lock()->m_color);
+				std::swap(current->m_color, grandParent->m_color);
 			}
-			else 
-			{//left right
+			else if (grandParent->m_right == parent && parent->m_left == current) 
+			{//right left
 				rotateRight(current);
 				rotateLeft(parent);
-				std::swap(parent->m_color, parent->m_prev.lock()->m_color);
+				std::swap(current->m_color, grandParent->m_color);
 			}
-
 		}
-		
 	
 	}
 	

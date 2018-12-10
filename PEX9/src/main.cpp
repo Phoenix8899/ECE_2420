@@ -1,72 +1,130 @@
+static const char* numbers[] = {
+"zero",
+"one",
+"two",
+"three",
+"four",
+"five",
+"six",
+"seven",
+"eight",
+"nine",
+"ten",
+"eleven",
+"twelve",
+"thirteen",
+"fourteen",
+"fifteen",
+"sixteen",
+"seventeen",
+"eighteen",
+"nineteen",
+"twenty",
+"twenty one",
+"twenty two",
+"twenty three",
+"twenty four",
+"twenty five",
+"twenty six",
+"twenty seven",
+"twenty eight",
+"twenty nine",
+"thirty",
+"thirty one",
+"thirty two",
+"thirty three",
+"thirty four",
+"thirty five",
+"thirty six",
+"thirty seven",
+"thirty eight",
+"thirty nine",
+"forty",
+"forty one",
+"forty two",
+"forty three",
+"forty four",
+"forty five",
+"forty six",
+"forty seven",
+"forty eight",
+"forty nine",
+"fifty",
+"fifty one",
+"fifty two",
+"fifty three",
+"fifty four",
+"fifty five",
+"fifty six",
+"fifty seven",
+"fifty eight",
+"fifty nine",
+"sixty",
+"sixty one",
+"sixty two",
+"sixty three",
+"sixty four",
+"sixty five",
+"sixty six",
+"sixty seven",
+"sixty eight",
+"sixty nine",
+"seventy",
+"seventy one",
+"seventy two",
+"seventy three",
+"seventy four",
+"seventy five",
+"seventy six",
+"seventy seven",
+"seventy eight",
+"seventy nine",
+"eighty",
+"eighty one",
+"eighty two",
+"eighty three",
+"eighty four",
+"eighty five",
+"eighty six",
+"eighty seven",
+"eighty eight",
+"eighty nine",
+"ninety",
+"ninety one",
+"ninety two",
+"ninety three",
+"ninety four",
+"ninety five",
+"ninety six",
+"ninety seven",
+"ninety eight",
+"ninety nine",
+};
+
 #include <iostream>
-#include "RBTKeyVal.hpp"
 #include <string>
-int main ()
-{
-	RBTKeyVal<int , std::string> rbt;
-	RBTKeyVal<int , std::string> RBTWO;
-	
-	std::cout << "insert 1" << std::endl;
-	rbt.insert(1,"one");
-	rbt.printTree();
-	
-	std::cout << "insert 2" << std::endl;
-	rbt.insert(2,"two");
-	rbt.printTree();
-	
-	std::cout << "insert 3" << std::endl;
-	rbt.insert(3,"three");
-	rbt.printTree();
-	
-	std::cout << "insert 4" << std::endl;
-	rbt.insert(4,"four");
-	rbt.printTree();
-	
-	std::cout << "insert 5" << std::endl;
-	rbt.insert(5,"fiven");
-	rbt.printTree();
-	
-	std::cout << "insert 6" << std::endl;
-	rbt.insert(6,"six");
-	rbt.printTree();
-	
-	std::cout << "insert 7" << std::endl;
-	rbt.insert(7,"seven");
-	rbt.printTree();
-	
-	std::cout << "insert 8" << std::endl;
-	rbt.insert(8,"eight");
-	rbt.printTree();
-	
-	std::cout << "insert 9" << std::endl;
-	rbt.insert(9,"nine");
-	rbt.printTree();
 
-	RBTWO = rbt; //does this work
+#include "RBTKeyVal.hpp"
+template <typename KeyType, typename ValType>
+class map : public RBTKeyVal<KeyType, ValType> {};
 
+int main() {
+map<int, std::string> numeric;
 
-	//std::cout << std::endl << std::endl << "Full iteration:" << std::endl;
- 	//rbt.forEach([](const int &key, std::string &val){
-    	//std::cout << "Key: " << key << std::endl;
-    	//std::cout << "Val: " << val << std::endl;
-  	//});
-	//	
-	//std::cout << std::endl << std::endl << "Deleted item \"three" << std::endl;
-	//rbt.del(3);
+auto insertSet = [&numeric](std::function<int(int)> transform) {
+for (int i = 0; i < 20; ++i) {
+int n = transform(i);
+std::cout << "Insert " << n << std::endl;
+numeric.insert(n, numbers[n]);
+numeric.printTree();
+std::cout << std::endl;
+}
+};
 
-	//std::cout << std::endl << std::endl << "After Del:" << std::endl;
-        //rbt.forEach([](const int &key, std::string &val){
-        //std::cout << "Key: " << key << std::endl;
-        //std::cout << "Val: " << val << std::endl;
-        //});
+insertSet([](int i) { return 80 + i; });
+insertSet([](int i) { return 20 - i; });
+insertSet([](int i) { return 40 - i; });
+insertSet([](int i) { return 60 + i; });
 
-	//std::cout << std::endl << std::endl << "Deep Copy?" << std::endl;
-	
-	//std::cout << std::endl << std::endl << "RBTWO:" << std::endl;
-        //RBTWO.forEach([](const int &key, std::string &val){
-        //std::cout << "Key: " << key << std::endl;
-        //std::cout << "Val: " << val << std::endl;
-        //});
-
-
+return 0;
 }
