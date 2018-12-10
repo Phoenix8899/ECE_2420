@@ -220,6 +220,8 @@ class RBTKeyVal : public KeyVal<K,V>
 		if (m_rootNode == nullptr)
 		{
 			m_rootNode = thingToInsert;
+			m_rootNode->m_left->m_prev = m_rootNode;
+			m_rootNode->m_right->m_prev = m_rootNode;
 			//m_rootNode->m_color = black;
 		}	
 		else 
@@ -227,26 +229,35 @@ class RBTKeyVal : public KeyVal<K,V>
 			if(current->m_key == nullptr)
 			{	
 				current = thingToInsert;
+				recolor(current);
+				//current->m_left->m_prev = current;
+				//current->m_right->m_prev = current;
+				
 			}
-			else if (key == *(current->m_key))
+			if (key == *(current->m_key))
 			{
 				*(current->m_val) = val;
 			}
 			else if (key < *(current->m_key))
 				{
-				//current->m_left->m_prev = current;
-				//current->m_right->m_prev = current;
+				current->m_left->m_prev = current;
+                                current->m_right->m_prev = current;
 				insertInternal(key,val, current->m_left);
 				}
-			else 
+			else if (key > *(current->m_key)) 
 				{
-				//current->m_left->m_prev = current;
-				//current->m_right->m_prev = current;
+				current->m_left->m_prev = current;
+                                current->m_right->m_prev = current;
 				insertInternal(key,val, current->m_right);
 				}
+			else 
+			{
+				current = thingToInsert;
+				recolor(current);
+			}
 		}
 		
-		recolor(current);
+		//recolor(current);
 		
 		
 	}
@@ -272,7 +283,7 @@ class RBTKeyVal : public KeyVal<K,V>
 	{//sibling
 		std::shared_ptr<RBTKeyValNode<K,V>> parent;
 		parent = getParent(current);
-		if (parent != nullptr)
+		if (parent != nullptr && current != nullptr)
 		{
 			if (*(current->m_key) > *(parent->m_key))
 			{
